@@ -1,5 +1,6 @@
 :root {
   --color-primary: #293241;
+  --color-primary-opacity: rgba(41, 50, 65, 0.5);
   --color-secondary: #ee6c4d;
   --color-light: #e0fbfc;
   --color-normal: #98c1d9;
@@ -8,15 +9,15 @@
 }
 
 /* ------------------- General Styles */
-body {
+* {
   margin: 0;
   padding: 0;
+}
+body {
   font-family: 'Lato', sans-serif;
   font-size: 12px;
 }
 ul, ol {
-  padding: 0;
-  margin: 0;
   list-style: none;
 }
 
@@ -26,6 +27,7 @@ ul, ol {
   color: var(--color-white);
   overflow: hidden;
   position: fixed;
+  z-index: 2;
   width: 100%;
 }
 .header__menu {
@@ -65,4 +67,51 @@ ul, ol {
 }
 .header__menu--left li a:hover{
   background-color: var(--color-strong);
+}
+
+/* ------------------------- Hero */
+.hero {
+  height: 100vh;
+  min-height: 600px;
+  position: relative;
+}
+.hero__banner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.banner1 {
+  background-image: url('https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg');
+}
+.hero__arrows {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero__arrows--container {
+  overflow: hidden;
+}
+.hero__arrows--container a {
+  display: block;
+  padding: 50px 15px;
+  color: var(--color-light);
+  font-size: 2em;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+.hero__arrows--container a:hover {
+  background-color: var(--color-primary-opacity);
+  opacity: 1;
 }
