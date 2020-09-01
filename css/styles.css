@@ -1,11 +1,13 @@
 :root {
   --color-primary: #293241;
-  --color-primary-opacity: rgba(41, 50, 65, 0.5);
+  --color-primary-opacity: #29324180;
   --color-secondary: #ee6c4d;
+  --color-secondary-opacity: #ee6c4d80;
   --color-light: #e0fbfc;
   --color-normal: #98c1d9;
   --color-strong: #3d5a80;
   --color-white: white;
+  --color-overlay: #00000080;
 }
 
 /* ------------------- General Styles */
@@ -27,7 +29,7 @@ ul, ol {
   color: var(--color-white);
   overflow: hidden;
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   width: 100%;
 }
 .header__menu {
@@ -84,9 +86,38 @@ ul, ol {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
+}
+.hero__banner::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: var(--color-overlay);
+  z-index: 1;
 }
 .banner1 {
   background-image: url('https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg');
+}
+.hero__banner--content {
+  position: relative;
+  z-index: 2;
+}
+.hero__banner--phrase {
+  padding: 15px 100px;
+  max-width: 1000px;
+  color: var(--color-white);
+  background-color: var(--color-secondary-opacity);
+  font-size: 4em;
+}
+.hero__banner--cite {
+  padding: 10px 100px;
+  color: var(--color-white);
+  background-color: var(--color-primary-opacity);
+  display: inline-block;
+  font-size: 1.2em;
 }
 .hero__arrows {
   position: absolute;
@@ -110,7 +141,6 @@ ul, ol {
   opacity: 0.5;
   transition: 0.5s;
 }
-
 .hero__arrows--container a:hover {
   background-color: var(--color-primary-opacity);
   opacity: 1;
