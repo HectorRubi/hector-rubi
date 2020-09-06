@@ -77,6 +77,24 @@ ul, ol {
 .header__menu--left li a:hover{
   background-color: var(--color-strong);
 }
+.header__menu--left-close {
+  display: none;
+}
+.header__menu--hamburger-menu {
+  display: none;
+}
+.header__menu--hamburger-menu a {
+  display: block;
+  padding: 15px;
+  margin: 0 5px;
+  font-size: 1.3em;
+  color: var(--color-white);
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+.header__menu--hamburger-menu a:hover {
+  color: var(--color-normal);
+}
 
 /* ---------------------------------------------------- Hero */
 .hero {
@@ -195,6 +213,40 @@ ul, ol {
 
 /* ------------------------------------------ Responsive < 768px */
 @media screen and (max-width: 768px) {
+  /* ---------------------- Top menu */
+  .header {
+    position: relative;
+  }
+  .header__menu--left {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 4;
+    width: 50%;
+    min-width: 384px;
+    background-color: var(--color-secondary);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+  }
+  .header__menu--left li {
+    height: auto;
+    width: 100%;
+  }
+  .header__menu--left li a {
+    padding: 10px 0;
+    font-size: 1.5em;
+  }
+  .header__menu--left-close {
+    display: block;
+  }
+  .header__menu--hamburger-menu {
+    display: block;
+  }
+
   /* ------------------------- Hero */
   .hero__banner--phrase {
     padding: 15px 50px;
@@ -214,6 +266,11 @@ ul, ol {
 
 /* ------------------------------------------ Responsive < 480px */
 @media screen and (max-width: 480px) {
+  /* ---------------------- Top menu */
+  .header__menu--left {
+    width: 100%;
+    min-width: initial;
+  }
   /* ------------------------- Hero */
   .hero__banner--phrase {
     padding: 15px;
@@ -232,5 +289,8 @@ ul, ol {
 
 /* ------------------------------------------ Responsive < 320px */
 @media screen and (max-width: 320px) {
-  
+  /* ---------------------- Top menu */
+  .header__menu--left li a {
+    font-size: 1.2em;
+  }
 }
