@@ -126,21 +126,26 @@ ul, ol {
   display: inline-block;
   font-size: 1.2em;
 }
-.hero__arrows {
+
+/* ---------------------------------------------- Hero Slider */
+.hero__arrow--container {
   position: absolute;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero__arrow--container.left {
   top: 0;
   bottom: 0;
   left: 0;
+}
+.hero__arrow--container.right {
+  top: 0;
+  bottom: 0;
   right: 0;
-  z-index: 1;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
-.hero__arrows--container {
-  overflow: hidden;
-}
-.hero__arrows--container a {
+.hero__arrow--container a {
   display: block;
   padding: 50px 15px;
   color: var(--color-light);
@@ -148,7 +153,7 @@ ul, ol {
   opacity: 0.5;
   transition: 0.5s;
 }
-.hero__arrows--container a:hover {
+.hero__arrow--container a:hover {
   background-color: var(--color-primary-opacity);
   opacity: 1;
 }
