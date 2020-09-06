@@ -179,19 +179,54 @@ ul, ol {
 
 /* ------------------------------------------ Responsive < 1024px */
 @media screen and (max-width: 1024px) {
-  
+  /* -------------------------- Hero */
+  .hero__banner--content {
+    max-width: 744px;
+  }
+  .hero__banner--phrase {
+    padding: 15px 70px;
+    font-size: 3.5em;
+  }
+  .hero__banner--cite {
+    padding: 10px 70px;
+  }
 }
 
 
 /* ------------------------------------------ Responsive < 768px */
 @media screen and (max-width: 768px) {
-  
+  /* ------------------------- Hero */
+  .hero__banner--phrase {
+    padding: 15px 50px;
+    font-size: 3em;
+  }
+  .hero__banner--cite {
+    padding: 10px 50px;
+    font-size: 1.1em;
+  }
+
+  /* ------------------ Hero Slider */
+  .hero__arrow--container {
+    display: none;
+  }
 }
 
 
 /* ------------------------------------------ Responsive < 480px */
 @media screen and (max-width: 480px) {
-  
+  /* ------------------------- Hero */
+  .hero__banner--phrase {
+    padding: 15px;
+    font-size: 2em;
+    text-align: center;
+  }
+  .hero__banner--cite {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1em;
+    text-align: center;
+  }
 }
 
 
