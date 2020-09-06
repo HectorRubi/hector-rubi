@@ -111,10 +111,10 @@ ul, ol {
 .hero__banner--content {
   position: relative;
   z-index: 2;
+  max-width: 1000px;
 }
 .hero__banner--phrase {
   padding: 15px 100px;
-  max-width: 1000px;
   color: var(--color-white);
   background-color: var(--color-secondary-opacity);
   font-size: 4em;
@@ -174,4 +174,28 @@ ul, ol {
 }
 .description__content--img {
   border-radius: 50%;
+}
+
+
+/* ------------------------------------------ Responsive < 1024px */
+@media screen and (max-width: 1024px) {
+  
+}
+
+
+/* ------------------------------------------ Responsive < 768px */
+@media screen and (max-width: 768px) {
+  
+}
+
+
+/* ------------------------------------------ Responsive < 480px */
+@media screen and (max-width: 480px) {
+  
+}
+
+
+/* ------------------------------------------ Responsive < 320px */
+@media screen and (max-width: 320px) {
+  
 }

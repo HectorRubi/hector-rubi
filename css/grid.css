@@ -5,6 +5,9 @@
 .row {
   display: flex;
 }
+[class*='col-'] {
+  box-sizing: border-box;
+}
 .col-lg-1 {
   width: 8.333333333333333%;
 }
@@ -41,6 +44,26 @@
 .col-lg-12 {
   width: 100%;
 }
-[class*='col-'] {
-  box-sizing: border-box;
+
+/* ------------------------------------------ Responsive < 1024px */
+@media screen and (max-width: 1024px) {
+
+}
+
+
+/* ------------------------------------------ Responsive < 768px */
+@media screen and (max-width: 768px) {
+  
+}
+
+
+/* ------------------------------------------ Responsive < 480px */
+@media screen and (max-width: 480px) {
+  
+}
+
+
+/* ------------------------------------------ Responsive < 320px */
+@media screen and (max-width: 320px) {
+  
 }
