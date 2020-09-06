@@ -213,6 +213,10 @@ ul, ol {
 
 /* ------------------------------------------ Responsive < 768px */
 @media screen and (max-width: 768px) {
+  /* ----------------- General Styles */
+  .section-title {
+    font-size: 2.3em;
+  }
   /* ---------------------- Top menu */
   .header {
     position: relative;
@@ -264,11 +268,21 @@ ul, ol {
   .hero__arrow--container {
     display: none;
   }
+
+  /* ------------------ Description */
+  .description__content--parr {
+    font-size: 1.8em;
+    margin-bottom: 50px;
+  }
 }
 
 
 /* ------------------------------------------ Responsive < 480px */
 @media screen and (max-width: 480px) {
+  /* ---------------- General Styles */
+  .section-title {
+    font-size: 1.9em;
+  }
   /* ---------------------- Top menu */
   .header__menu--left {
     width: 100%;
@@ -287,13 +301,25 @@ ul, ol {
     font-size: 1.1em;
     text-align: center;
   }
+  /* ------------------ Description */
+  .description__content--parr {
+    font-size: 1.5em;
+  }
 }
 
 
 /* ------------------------------------------ Responsive < 320px */
 @media screen and (max-width: 320px) {
+  /* ---------------- General Styles */
+  .section-title {
+    font-size: 1.8em;
+  }
   /* ---------------------- Top menu */
   .header__menu--left li a {
     font-size: 1.2em;
+  }
+  /* ------------------ Description */
+  .description__content--parr {
+    font-size: 1.3em;
   }
 }
