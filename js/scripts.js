@@ -3,7 +3,7 @@
   const menuSection = document.getElementById('menuSection')
   const menuButton = document.getElementById('menuButton')
   const menuCloseButton = document.getElementById('menuCloseButton')
-  const ipad = window.matchMedia('screen and (min-width: 768px)')
+  const ipad = window.matchMedia('screen and (max-width: 768px)')
 
   const hideShow = event => {
     event.preventDefault()
