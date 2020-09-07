@@ -197,7 +197,7 @@ ul, ol {
 /* -------------------------------------------- Projects */
 .projects {
   padding: 96px 0;
-  background-color: var(--color-strong);
+  background-color: var(--color-normal);
 }
 .projects__title {
   color: var(--color-white);
@@ -253,6 +253,21 @@ ul, ol {
 .project__element--info a {
   color: var(--color-white);
   font-weight: bold;
+}
+.project__element--info .tech {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 2px 12px;
+  border: solid 1px var(--color-light);
+  border-radius: 15px;
+  font-size: 0.8em;
+  background-color: var(--color-primary-opacity);
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.project__element--info .tech:hover {
+  background-color: var(--color-light);
+  color: var(--color-primary);
 }
 .project__element--description {
   font-size: 1.5em;
