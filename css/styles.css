@@ -196,8 +196,20 @@ ul, ol {
 
 /* -------------------------------------------- Projects */
 .projects {
+  position: relative;
   padding: 96px 0;
   background-color: var(--color-normal);
+}
+.projects__background {
+  position: absolute;
+  top: -96px;
+  left: 0;
+  width: 100%;
+}
+.projects__background img {
+  width: 100%;
+  height: 192px;
+  object-fit: contain;
 }
 .projects__title {
   color: var(--color-white);
