@@ -194,6 +194,70 @@ ul, ol {
   border-radius: 50%;
 }
 
+/* -------------------------------------------- Projects */
+.projects {
+  padding: 96px 0;
+  background-color: var(--color-strong);
+}
+.projects__title {
+  color: var(--color-white);
+  margin-bottom: 50px;
+}
+.projects__element {
+  position: relative;
+  padding: 70px 50px;
+  margin-bottom: 30px;
+  color: var(--color-white);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+.projects .container:hover .projects__element{
+  opacity: 0.7;
+}
+.projects .container:hover .projects__element:hover {
+  opacity: 1;
+}
+.projects__element::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: var(--color-overlay);
+  z-index: 1;
+}
+.projects__element.project1 {
+  background-image: url('http://lorempixel.com/720/480/city/1');
+}
+.projects__element.project2 {
+  background-image: url('http://lorempixel.com/720/480/city/2');
+}
+.project__element--content {
+  position: relative;
+  z-index: 2;
+}
+.project__element--title {
+  margin-bottom: 20px;
+  font-size: 2.2em;
+}
+.project__element--info {
+  padding-right: 20px;
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+.project__element--info a {
+  color: var(--color-white);
+  font-weight: bold;
+}
+.project__element--description {
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
 
 /* ------------------------------------------ Responsive < 1024px */
 @media screen and (max-width: 1024px) {
