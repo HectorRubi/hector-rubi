@@ -365,6 +365,19 @@ ul, ol {
     font-size: 1.8em;
     margin-bottom: 50px;
   }
+
+  /* --------------------- Projects */
+  .project__element--title {
+    font-size: 2em;
+  }
+  .project__element--info {
+    margin-bottom: 20px;
+    padding: 0;
+    font-size: 1.4em;
+  }
+  .project__element--description {
+    font-size: 1.4em;
+  }
 }
 
 
@@ -396,6 +409,20 @@ ul, ol {
   .description__content--parr {
     font-size: 1.5em;
   }
+
+  /* --------------------- Projects */
+  .projects__element {
+    padding: 50px 40px;
+  }
+  .project__element--title {
+    font-size: 2em;
+  }
+  .project__element--info {
+    font-size: 1.3em;
+  }
+  .project__element--description {
+    font-size: 1.3em;
+  }
 }
 
 
@@ -412,5 +439,9 @@ ul, ol {
   /* ------------------ Description */
   .description__content--parr {
     font-size: 1.3em;
+  }
+  /* --------------------- Projects */
+  .projects__element {
+    padding: 30px 20px;
   }
 }
