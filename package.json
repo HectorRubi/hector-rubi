@@ -1,0 +1,23 @@
+{
+  "name": "hector-rubi",
+  "version": "1.0.0",
+  "description": "Personal website that include my portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HectorRubi/hector-rubi.git"
+  },
+  "keywords": [
+    "Portfolio",
+    "Website"
+  ],
+  "author": "Hector Rubi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HectorRubi/hector-rubi/issues"
+  },
+  "homepage": "https://github.com/HectorRubi/hector-rubi#readme"
+}
