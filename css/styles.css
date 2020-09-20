@@ -141,8 +141,12 @@ section {
   align-items: center;
 }
 .hero__badges--element {
+  position: relative;
   height: 30px;
   border-radius: 20px;
+  animation-name: slide-left;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
 }
 .badge1 {
   background-color: var(--color-secondary);
@@ -199,6 +203,9 @@ section {
   display: grid;
   grid-template-columns: 1fr 400px 1fr;
   align-items: center;
+  animation-name: fade-in;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
 }
 .hero__content--image {
   height: 300px;
