@@ -1,13 +1,16 @@
 .container {
   max-width: 1000px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 .row {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 [class*='col-'] {
   box-sizing: border-box;
+  padding: 0 20px;
 }
 .col-lg-1 {
   width: 8.333333333333333%;
@@ -130,6 +133,12 @@
 
 /* ------------------------------------------ Responsive < 480px */
 @media screen and (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+  [class*='col-'] {
+    padding: 0 15px;
+  }
   .col-xs-1 {
     width: 8.333333333333333%;
   }
@@ -165,5 +174,15 @@
   }
   .col-xs-12 {
     width: 100%;
+  }
+}
+
+/* ------------------------------------------ Responsive < 320px */
+@media screen and (max-width: 320px) {
+  .container {
+    padding: 0 10px;
+  }
+  [class*='col-'] {
+    padding: 0 10px;
   }
 }
