@@ -3,8 +3,8 @@
   --color-primary-opacity: #29324180;
   --color-secondary: #ee6c4d;
   --color-secondary-opacity: #ee6c4d80;
-  --color-tertiary: #32864e;
-  --color-tertiary-opacity: #32864e80;
+  --color-tertiary: #4caf50;
+  --color-tertiary-opacity: #4caf5080;
   --color-light: #e0fbfc;
   --color-normal: #98c1d9;
   --color-strong: #3d5a80;
@@ -25,11 +25,19 @@ ul, ol {
   list-style: none;
 }
 
+img {
+  width: 100%;
+}
+
 a {
   text-decoration: none;
 }
 a:hover {
   text-decoration: underline;
+}
+
+section {
+  padding: 96px 0;
 }
 
 .section-title {
@@ -108,8 +116,9 @@ a:hover {
 /* ---------------------------------------------------- Hero */
 .hero {
   height: 100vh;
-  min-height: 600px;
+  min-height: 500px;
   position: relative;
+  padding: 0;
 }
 .hero__banner {
   height: 100%;
@@ -186,9 +195,6 @@ a:hover {
 }
 
 /* ------------------------------------------ Description */
-.description {
-  padding: 96px 0;
-}
 .description__content {
   justify-content: center;
   align-items: center;
@@ -206,10 +212,10 @@ a:hover {
 /* -------------------------------------------- Projects */
 .projects {
   position: relative;
-  padding: 96px 0;
-  background-color: var(--color-normal);
+  background-color: var(--color-tertiary);
 }
 .projects__background {
+  display: none;
   position: absolute;
   top: -96px;
   left: 0;
@@ -230,6 +236,7 @@ a:hover {
   padding: 70px 50px;
   margin-bottom: 30px;
   color: var(--color-white);
+  background-color: black;
   background-size: 200%;
   background-position: center;
   background-repeat: no-repeat;
@@ -257,7 +264,7 @@ a:hover {
   z-index: 1;
 }
 .projects__element.project1 {
-  background-image: url('http://lorempixel.com/720/480/city/1');
+  
 }
 .projects__element.project2 {
   background-image: url('../images/project-skolar-bg.jpg');
@@ -405,6 +412,9 @@ a:hover {
     min-width: initial;
   }
   /* ------------------------- Hero */
+  .hero {
+    height: 500px;
+  }
   .hero__banner--phrase {
     padding: 15px;
     font-size: 2em;
@@ -424,7 +434,7 @@ a:hover {
 
   /* --------------------- Projects */
   .projects__element {
-    padding: 50px 40px;
+    padding: 30px 20px;
   }
   .project__element--title {
     font-size: 2em;
@@ -451,9 +461,5 @@ a:hover {
   /* ------------------ Description */
   .description__content--parr {
     font-size: 1.3em;
-  }
-  /* --------------------- Projects */
-  .projects__element {
-    padding: 30px 20px;
   }
 }
