@@ -278,13 +278,17 @@ section {
 .projects {
   position: relative;
   padding-top: 0;
+  background: linear-gradient(white, var(--color-light));
+}
+.projects > .container .projects__element:last-child {
+  margin-bottom: 0;
 }
 .projects__title {
   margin-bottom: 50px;
 }
 .projects__element {
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -299,10 +303,17 @@ section {
   object-fit: cover;
 }
 .project__element--content {
-  margin-left: -30%;
+  position: relative;
   background-color: var(--color-light);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   padding: 40px;
+  z-index: 2;
+}
+.project__element--content.left {
+  margin-left: -30%;
+}
+.project__element--content.right {
+  margin-right: -30%;
 }
 .project__element--title {
   margin-bottom: 20px;
@@ -339,6 +350,11 @@ section {
   transition: background 1s ease-out;
 }
 
+/* -------------------------------------------- Experiences */
+.experience {
+  
+}
+
 /* ------------------------------------------ Responsive < 1024px */
 @media screen and (max-width: 1024px) {
   /* -------------------------- Hero */
@@ -350,6 +366,29 @@ section {
   }
   .hero__content--image {
     grid-column: 1;
+  }
+}
+
+/* ------------------------------------------ Responsive < 1024px */
+/* Projects Only */
+@media screen and (max-width: 880px) {
+  /* --------------------- Projects */
+  .projects__element {
+    flex-direction: column;
+  }
+  .projects__element.reverse {
+    flex-direction: column-reverse;
+  }
+  .project__element--content {
+    margin-top: -20%;
+    width: 90%;
+    box-sizing: border-box;
+  }
+  .project__element--content.left {
+    margin-left: 0;
+  }
+  .project__element--content.right {
+    margin-right: 0;
   }
 }
 
@@ -439,6 +478,10 @@ section {
   .projects__element {
     background-size: cover;
   }
+  .projects__element--image {
+    min-width: auto;
+    height: 500px;
+  }
   .project__element--title {
     font-size: 2em;
   }
@@ -494,7 +537,14 @@ section {
 
   /* --------------------- Projects */
   .projects__element {
-    padding: 30px 20px;
+    margin-bottom: 30px;
+  }
+  .projects__element--image {
+    height: 400px;
+  }
+  .project__element--content {
+    margin-top: -50%;
+    padding: 35px;
   }
   .project__element--title {
     font-size: 2em;
@@ -541,5 +591,18 @@ section {
   }
   .description__content--parr {
     font-size: 1.3em;
+  }
+
+  /* --------------------- Projects */
+  .projects__element {
+    margin-bottom: 20px;
+  }
+  .projects__element--image {
+    height: 300px;
+  }
+  .project__element--content {
+    padding: 25px;
+    width: auto;
+    margin-top: 0;
   }
 }
