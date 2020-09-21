@@ -352,7 +352,52 @@ section {
 
 /* -------------------------------------------- Experiences */
 .experience {
-  
+  background-color: var(--color-light);
+  padding-bottom: 0;
+}
+.experience [class*='col-'] {
+  padding: 0;
+}
+.experience__title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.experience__element.bg1 {
+  background-color: var(--color-highlight-2);
+}
+.experience__element.bg2 {
+  background-color: var(--color-primary);
+}
+.experience__element.bg3 {
+  background-color: var(--color-secondary);
+}
+.experience__element--img img {
+  display: block;
+  height: 600px;
+  object-fit: cover;
+}
+.experience__element--container {
+  padding: 0 60px;
+  color: white;
+}
+.experience__element--title {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+.experience__element--title .period {
+  font-size: 0.7em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+.experience__element--title .period i {
+  padding: 0 20px;
+}
+.experience__element--description {
+  font-size: 1.5em;
+  line-height: 1.5em;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 /* ------------------------------------------ Responsive < 1024px */
