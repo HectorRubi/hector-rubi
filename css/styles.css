@@ -238,24 +238,47 @@ section {
 }
 
 /* ------------------------------------------ Description */
+.description {
+  background-color: var(--color-dark);
+  background-image: url('../images/description-bg.png');
+  background-size: cover;
+  background-position: center;
+}
 .description__content {
-  justify-content: center;
-  align-items: center;
+  background-color: white;
+  padding: 70px 50px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+.description__content--title {
+  padding: 0 20px;
+  text-align: left;
 }
 .description__content--parr {
   padding: 0 20px;
   font-size: 2em;
   line-height: 2em;
-  color: var(--color-primary);
+  color: var(--color-text);
 }
-.description__content--img {
-  border-radius: 50%;
+.description__content--parr p {
+  margin-bottom: 20px;
+}
+.description__content--parr strong {
+  color: var(--color-dark);
+}
+
+.intersection-desc-proj {
+  margin-top: -96px;
+  background-image: url('../images/intersection-desc-proj.svg');
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* -------------------------------------------- Projects */
 .projects {
   position: relative;
-  background-color: var(--color-tertiary);
+  padding-top: 0;
 }
 .projects__background {
   display: none;
@@ -488,6 +511,9 @@ section {
   }
 
   /* ------------------ Description */
+  .description__content {
+    padding: 50px 30px;
+  }
   .description__content--parr {
     font-size: 1.5em;
   }
@@ -536,6 +562,9 @@ section {
   }
 
   /* ------------------ Description */
+  .description__content {
+    padding: 30px 10px;
+  }
   .description__content--parr {
     font-size: 1.3em;
   }
