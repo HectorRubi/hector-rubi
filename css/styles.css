@@ -346,7 +346,6 @@ section {
 .project__element--link a:hover {
   text-decoration: none;
   background-position: 100% 0;
-  transition: background 1s ease-out;
 }
 
 /* -------------------------------------------- Experiences */
@@ -362,13 +361,13 @@ section {
   margin-bottom: 50px;
 }
 .experience__element.bg1 {
-  background-color: var(--color-highlight-2);
+  background-color: var(--color-highlight-1);
 }
 .experience__element.bg2 {
-  background-color: var(--color-primary);
+  background-color: var(--color-dark);
 }
 .experience__element.bg3 {
-  background-color: var(--color-secondary);
+  background-color: var(--color-primary);
 }
 .experience__element--img img {
   display: block;
@@ -398,6 +397,42 @@ section {
   line-height: 1.5em;
   text-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
+
+/* -------------------------------------------- Certifications */
+.certifications {
+  background-color: var(--color-optional-1);
+}
+.certifications__title {
+  margin-bottom: 50px;
+  text-align: center;
+}
+.certifications [class*='col-']:last-child .certifications__element {
+  margin-bottom: 0;
+}
+.certifications__element {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.certifications__element--image {
+  max-width: 70px;
+}
+.certifications__element--container {
+  margin-left: 20px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+.certifications__element--title {
+  font-size: 1.5em;
+  line-height: 1.3em;
+  margin-bottom: 5px;
+}
+.certifications__element--description {
+  font-size: 1.3em;
+  color: var(--color-text);
+}
+
 
 /* ------------------------------------------ Responsive < 1024px */
 @media screen and (max-width: 1024px) {
