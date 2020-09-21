@@ -412,6 +412,11 @@ section {
   .hero__content--image {
     grid-column: 1;
   }
+
+  /* ------------------- Experiences */
+  .experience__element--img img {
+    height: 500px;
+  }
 }
 
 /* ------------------------------------------ Responsive < 1024px */
@@ -538,6 +543,25 @@ section {
   .project__element--description {
     font-size: 1.4em;
   }
+
+  /* ------------------- Experiences */
+  .experience__element.reverse .row {
+    flex-direction: column-reverse;
+  }
+  .experience__element--img img {
+    height: 400px;
+  }
+  .experience__element--container {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .experience__element--title {
+    font-size: 1.8em;
+  }
+  .experience__element--description {
+    font-size: 1.4em;
+    line-height: 1.4em;
+  }
 }
 
 
@@ -600,6 +624,24 @@ section {
   .project__element--description {
     font-size: 1.3em;
   }
+
+  /* ------------------- Experiences */
+  .experience {
+    padding-top: 0;
+  }
+  .experience__element--img img {
+    height: 300px;
+  }
+  .experience__element--container {
+    padding: 50px 30px;
+  }
+  .experience__element--title {
+    font-size: 1.6em;
+  }
+  .experience__element--description {
+    font-size: 1.3em;
+    line-height: 1.3em;
+  }
 }
 
 
@@ -649,5 +691,10 @@ section {
     padding: 25px;
     width: auto;
     margin-top: 0;
+  }
+
+  /* ------------------- Experiences */
+  .experience__element--container {
+    padding: 40px 20px;
   }
 }
