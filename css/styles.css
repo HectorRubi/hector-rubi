@@ -239,7 +239,6 @@ section {
 /* ------------------------------------------ Description */
 .description {
   background-color: var(--color-dark);
-  background-image: url('../images/description-bg.png');
   background-size: cover;
   background-position: center;
 }
