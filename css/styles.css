@@ -400,28 +400,38 @@ section {
 
 /* -------------------------------------------- Certifications */
 .certifications {
-  background-color: var(--color-optional-1);
+  background-color: var(--color-optional-2);
 }
 .certifications__title {
   margin-bottom: 50px;
   text-align: center;
+}
+.certifications__subtitle {
+  margin-bottom: 30px;
+  font-size: 2em;
+}
+.certifications [class*='col-'] {
+  min-height: 260px;
 }
 .certifications [class*='col-']:last-child .certifications__element {
   margin-bottom: 0;
 }
 .certifications__element {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 .certifications__element--image {
   max-width: 70px;
+  margin-bottom: 20px;
 }
 .certifications__element--container {
-  margin-left: 20px;
   background-color: white;
   padding: 20px;
   border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
 }
 .certifications__element--title {
   font-size: 1.5em;
