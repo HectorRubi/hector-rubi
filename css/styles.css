@@ -121,11 +121,11 @@ section {
 
 /* ---------------------------------------------------- Hero */
 .hero {
-  height: 95vh;
+  height: 100vh;
   min-height: 800px;
   position: relative;
   padding: 0;
-  background-color: var(--color-light);
+  background-color: var(--color-dark);
 }
 .hero__badges {
   position: absolute;
@@ -143,8 +143,9 @@ section {
   position: relative;
   height: 30px;
   border-radius: 20px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
   animation-name: slide-left;
-  animation-duration: 0.8s;
+  animation-duration: 1.5s;
   animation-timing-function: ease-in-out;
 }
 .badge1 {
@@ -183,7 +184,7 @@ section {
   grid-column: 12 / span 6;
 }
 .badge8 {
-  background-color: var(--color-dark);
+  background-color: var(--color-light);
   grid-row: 24 / span 2;
   grid-column: 6 / span 6;
 }
@@ -214,6 +215,7 @@ section {
   overflow: hidden;
   grid-column: 2 / 3;
   justify-self: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .hero__content--box {
   display: inline-block;
@@ -222,8 +224,9 @@ section {
 }
 .hero__box--container {
   background-color: white;
-  border-radius: 20px;
+  border-radius: 5px;
   padding: 50px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
 }
 .hero__box--container h2 {
   font-size: 3em;
@@ -238,15 +241,12 @@ section {
 
 /* ------------------------------------------ Description */
 .description {
-  background-color: var(--color-dark);
-  background-size: cover;
-  background-position: center;
 }
 .description__content {
   background-color: white;
   padding: 70px 50px;
-  border-radius: 20px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 .description__content--title {
   padding: 0 20px;
@@ -254,7 +254,7 @@ section {
 }
 .description__content--parr {
   padding: 0 20px;
-  font-size: 2em;
+  font-size: 1.7em;
   line-height: 2em;
   color: var(--color-text);
 }
@@ -263,14 +263,6 @@ section {
 }
 .description__content--parr strong {
   color: var(--color-dark);
-}
-
-.intersection-desc-proj {
-  margin-top: -96px;
-  background-image: url('../images/intersection-desc-proj.svg');
-  background-size: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 /* -------------------------------------------- Projects */
@@ -295,6 +287,8 @@ section {
 .projects__element--image {
   min-width: 750px;
   height: 500px;
+  border-radius: 5px;
+  overflow: hidden;
 }
 .projects__element--image img {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -305,6 +299,7 @@ section {
   position: relative;
   background-color: var(--color-light);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
   padding: 40px;
   z-index: 2;
 }
@@ -338,10 +333,11 @@ section {
   padding: 10px 25px;
   color: var(--color-light);
   font-weight: bold;
-  background: linear-gradient(to left, var(--color-primary), var(--color-tertiary), var(--color-primary)); 
-  background-size: 300% 100%;
+  background: linear-gradient(to left, var(--color-primary), var(--color-tertiary) 50%, var(--color-primary)); 
+  background-size: 600% 100%;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
-  transition: background 1s ease-out;
+  border-radius: 5px;
+  transition: background 0.8s ease-out;
 }
 .project__element--link a:hover {
   text-decoration: none;
@@ -564,7 +560,7 @@ section {
 
   /* ------------------ Description */
   .description__content--parr {
-    font-size: 1.8em;
+    font-size: 1.6em;
     margin-bottom: 50px;
   }
 
