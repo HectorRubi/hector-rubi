@@ -126,16 +126,13 @@ section {
   position: relative;
   padding: 0;
   background-color: var(--color-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .hero__content {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 2;
-  display: grid;
-  grid-template-columns: 1fr 400px 1fr;
+  display: flex;
+  justify-content: center;
   align-items: center;
   animation-name: fade-in;
   animation-duration: 0.8s;
@@ -147,13 +144,11 @@ section {
   object-fit: cover;
   border-radius: 50%;
   overflow: hidden;
-  grid-column: 2 / 3;
-  justify-self: center;
+  margin-right: 50px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .hero__content--box {
-  display: inline-block;
-  justify-self: start;
+  display: block;
   padding-right: 20px;
 }
 .hero__box--container {
@@ -377,12 +372,6 @@ section {
 /* ------------------------------------------ Responsive < 1024px */
 @media screen and (max-width: 1024px) {
   /* -------------------------- Hero */
-  .hero__content {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .hero__content--image {
-    grid-column: 1;
-  }
 
   /* ------------------- Experiences */
   .experience__element--img img {
@@ -467,17 +456,16 @@ section {
     min-height: 700px;
   }
   .hero__content {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
+    flex-direction: column;
   }
   .hero__content--image {
     height: 250px;
     width: 250px;
+    margin: 0;
+    margin-bottom: 50px;
   }
   .hero__content--box {
     padding: 0 10px;
-    justify-self: center;
-    align-self: start;
   }
   .hero__box--container {
     padding: 40px;
@@ -629,6 +617,7 @@ section {
   .hero__content--image {
     height: 180px;
     width: 180px;
+    margin-bottom: 30px;
   }
   .hero__box--container {
     padding: 30px;
