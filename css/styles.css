@@ -212,14 +212,14 @@ section {
 /* -------------------------------------------- Projects */
 .projects {
   position: relative;
-  padding-top: 0;
-  background: linear-gradient(white, var(--color-light));
+  background-color: var(--color-dark);
 }
 .projects > .container .projects__element:last-child {
   margin-bottom: 0;
 }
 .projects__title {
   margin-bottom: 50px;
+  color: white;
 }
 .projects__element {
   position: relative;
