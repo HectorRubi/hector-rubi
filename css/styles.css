@@ -194,7 +194,7 @@ section {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 .description__content--title {
-  padding: 0 20px;
+  margin-bottom: 30px;
 }
 .description__content--parr {
   padding: 0 20px;
