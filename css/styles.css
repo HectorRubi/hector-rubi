@@ -132,8 +132,22 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -50%;
+  width: 100%;
+  z-index: 1;
+  background-image: linear-gradient(to left, var(--color-primary), var(--color-dark));
+  transform: skew(20deg);
 }
 .hero__content {
+  position: relative;
+  z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
