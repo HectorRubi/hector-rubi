@@ -5,7 +5,7 @@ class Certificates {
 
   __buildSimpleCertified(certified) {
     let code = `
-      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
         <article class="certifications__element">
           <figure class="certifications__element--image">
             <img src="${certified.image}" alt="Certified">
