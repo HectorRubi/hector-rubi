@@ -291,50 +291,46 @@ section {
 /* -------------------------------------------- Experiences */
 .experience {
   background-color: var(--color-light);
-  padding-bottom: 0;
+}
+.experience .row {
+  align-items: stretch;
 }
 .experience [class*='col-'] {
-  padding: 0;
+  margin-bottom: 50px;
 }
 .experience__title {
   margin-bottom: 50px;
 }
-.experience__element.bg1 {
-  background-color: var(--color-highlight-1);
-}
-.experience__element.bg2 {
-  background-color: var(--color-dark);
-}
-.experience__element.bg3 {
-  background-color: var(--color-primary);
+.experience__element {
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  height: 100%;
 }
 .experience__element--img img {
   display: block;
-  height: 600px;
+  height: 400px;
   object-fit: cover;
 }
 .experience__element--container {
-  padding: 0 60px;
-  color: white;
+  padding: 50px;
 }
-.experience__element--title {
+.experience__element--job {
   font-size: 2em;
-  margin-bottom: 20px;
-  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  margin-bottom: 5px;
 }
-.experience__element--title .period {
-  font-size: 0.7em;
-  font-weight: bold;
-  margin-bottom: 20px;
-  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+.experience__element--place {
+  font-size: 1.5em;
+  font-weight: normal;
+  margin-bottom: 10px;
 }
-.experience__element--title .period i {
-  padding: 0 20px;
+.experience__element--period {
+  font-size: 1.3em;
+  margin-bottom: 5px;
 }
 .experience__element--description {
-  font-size: 1.5em;
-  line-height: 1.5em;
-  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  font-size: 1.4em;
+  line-height: 1.8em;
 }
 
 /* -------------------------------------------- Certifications */
@@ -386,7 +382,7 @@ section {
 @media screen and (max-width: 1024px) {
   /* ------------------- Experiences */
   .experience__element--img img {
-    height: 500px;
+    height: 300px;
   }
 }
 
@@ -515,19 +511,9 @@ section {
   .experience__element.reverse .row {
     flex-direction: column-reverse;
   }
-  .experience__element--img img {
-    height: 400px;
-  }
   .experience__element--container {
     padding-top: 80px;
     padding-bottom: 80px;
-  }
-  .experience__element--title {
-    font-size: 1.8em;
-  }
-  .experience__element--description {
-    font-size: 1.4em;
-    line-height: 1.4em;
   }
 }
 
@@ -590,17 +576,20 @@ section {
   }
 
   /* ------------------- Experiences */
-  .experience {
-    padding-top: 0;
-  }
   .experience__element--img img {
     height: 300px;
   }
   .experience__element--container {
     padding: 50px 30px;
   }
-  .experience__element--title {
-    font-size: 1.6em;
+  .experience__element--job {
+    font-size: 1.8em;
+  }
+  .experience__element--place {
+    font-size: 1.4em;
+  }
+  .experience__element--period {
+    font-size: 1.2em;
   }
   .experience__element--description {
     font-size: 1.3em;
@@ -661,5 +650,14 @@ section {
   /* ------------------- Experiences */
   .experience__element--container {
     padding: 40px 20px;
+  }
+  .experience__element--job {
+    font-size: 1.7em;
+  }
+  .experience__element--place {
+    font-size: 1.3em;
+  }
+  .experience__element--description {
+    font-size: 1.2em;
   }
 }
