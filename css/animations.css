@@ -1,14 +1,14 @@
 @keyframes slide-left {
   0% { 
-    left: -200%; 
+    left: -100%; 
     opacity: 0;
   }
   65% { 
-    left: 10%; 
-    opacity: 1;
+    left: -45%; 
   }
   100% { 
-    left: 0; 
+    left: -50%;
+    opacity: 1;
   }
 }
 

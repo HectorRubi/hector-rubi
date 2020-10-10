@@ -145,6 +145,9 @@ section {
   z-index: 1;
   background-image: linear-gradient(to left, var(--color-primary), var(--color-dark));
   transform: skew(20deg);
+  animation-name: slide-left;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
 }
 .hero__content {
   position: relative;
