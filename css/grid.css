@@ -3,6 +3,10 @@
   margin: 0 auto;
   padding: 0 20px;
 }
+.container-flex {
+  margin: 0 auto;
+  padding: 0 20px;
+}
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -136,6 +140,9 @@
   .container {
     padding: 0 15px;
   }
+  .container-flex {
+    padding: 0 10px;
+  }
   [class*='col-'] {
     padding: 0 15px;
   }
@@ -181,6 +188,9 @@
 @media screen and (max-width: 320px) {
   .container {
     padding: 0 10px;
+  }
+  .container-flex {
+    padding: 0 5px;
   }
   [class*='col-'] {
     padding: 0 10px;
