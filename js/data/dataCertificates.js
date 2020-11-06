@@ -118,6 +118,12 @@ const dataCertificates = [
     description: "Platzi",
     image: "https://static.platzi.com/media/achievements/badge-fundamentos-typescript-de971b70-f004-443a-b3e6-35ad2fb901c7.png",
     link: "https://platzi.com/@Hector_Rubi/curso/1869-typescript/diploma/detalle/"
+  },
+  {
+    name: "Curso de Angular",
+    description: "Platzi",
+    image: "https://static.platzi.com/media/achievements/badge-angular-b3bf6a40-abfb-44b7-b093-2583f7638a3a.png",
+    link: "https://platzi.com/@Hector_Rubi/curso/1670-angular/diploma/detalle/"
   }
 ]
 
