@@ -1,6 +1,7 @@
 class Certificates {
   constructor(certificates) {
     this.certificates = certificates
+    this.renderCode()
   }
 
   __buildSimpleCertified(certified) {
