@@ -12,6 +12,12 @@ const dataCertificates = [
     link: "https://platzi.com/@Hector_Rubi/curso/1557-git-github/diploma/detalle/"
   },
   {
+    name: "Curso de Introducción a la Terminal y Línea de Comandos",
+    description: "Platzi",
+    image: "https://static.platzi.com/media/achievements/badges-terminal-c9ee432b-2598-4e94-88d8-0a30842ef886.png",
+    link: "https://platzi.com/@Hector_Rubi/curso/1748-terminal/diploma/detalle/"
+  },
+  {
     name: "Curso de Desarrollo Web Online",
     description: "Platzi",
     image: "https://static.platzi.com/media/achievements/1350-09ddb033-354b-4c0c-84a4-56cbb71d0b08.png",
