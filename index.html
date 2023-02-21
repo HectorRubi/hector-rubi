@@ -13,33 +13,49 @@
 </head>
 <body>
   <!-- Start header -->
-  <header class="header">
-    <nav class="header__menu">
-      <div class="header__menu--logo-container">
+  <header class="bg-zinc-800 text-white text-base">
+    <nav class="container flex justify-between">
+      <div class="p-4">
         <a href="index.html">
-          <h1>Héctor Rubí García</h1>
+          <h1>
+            <span class="font-bold">Héctor </span>
+            <span>Rubí García</span>
+          </h1>
         </a>
       </div>
 
-      <ul class="header__menu--left" id="menuSection">
-        <li>
-          <a href="#">Descripción</a>
-        </li>
-        <li>
-          <a href="#">Proyectos</a>
-        </li>
-        <li>
-          <a href="#">Habilidades</a>
-        </li>
-        <li>
-          <a href="#">Certificaciones</a>
-        </li>
-        <li class="header__menu--left-close">
-          <a href="#" id="menuCloseButton">Cerrar</a>
-        </li>
-      </ul>
+      <div class="fixed top-0 -left-full bg-zinc-800 h-screen w-4/5 max-w-lg z-10 flex flex-col justify-center items-center text-center ease-out duration-500" id="menuSection">
+        <ul class="w-full">
+          <li class="w-full hover:bg-blue-900 ease-in duration-300">
+            <a class="block h-full w-full py-4 hover:no-underline" href="#">Descripción</a>
+          </li>
+          <li class="w-full hover:bg-blue-900 ease-in duration-300">
+            <a class="block h-full w-full py-4 hover:no-underline" href="#">Proyectos</a>
+          </li>
+          <li class="w-full hover:bg-blue-900 ease-in duration-300">
+            <a class="block h-full w-full py-4 hover:no-underline" href="#">Habilidades</a>
+          </li>
+          <li class="w-full hover:bg-blue-900 ease-in duration-300">
+            <a class="block h-full w-full py-4 hover:no-underline" href="#">Certificaciones</a>
+          </li>
+        </ul>
+        <ul class="w-full">
+          <li class="w-full hover:bg-blue-900 ease-in duration-300">
+            <a class="block h-full w-full py-4 hover:no-underline" href="#">
+              <span>Icon</span>
+              <span>LinkedIn</span>
+            </a>
+          </li>
+          <li class="w-full hover:bg-blue-900 ease-in duration-300">
+            <a class="block h-full w-full py-4 hover:no-underline" href="#">
+              <span>Icon</span>
+              <span>GitHub</span>
+            </a>
+          </li>
+        </ul>
+      </div>
 
-      <div class="header__menu--hamburger-menu">
+      <div class="p-4">
         <a href="#" id="menuButton">
           <i class="fas fa-bars"></i>
         </a>
