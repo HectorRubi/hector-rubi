@@ -20,7 +20,5 @@
     "url": "https://github.com/HectorRubi/hector-rubi/issues"
   },
   "homepage": "https://github.com/HectorRubi/hector-rubi#readme",
-  "devDependencies": {
-    "live-server": "^1.2.1"
-  }
+  "devDependencies": {}
 }
