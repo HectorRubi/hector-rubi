@@ -6,4 +6,3 @@ import dataProjects from './data/dataProjects.js';
 
 const menu = new HamburgerMenu()
 const cert = new Certificates(dataCertificates)
-const proj = new Projects(dataProjects)
