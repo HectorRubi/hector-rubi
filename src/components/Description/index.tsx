@@ -31,7 +31,7 @@ const skills: Skills[] = [
 export const Description = () => {
   return (
     <section className="bg-slate-300 dark:bg-slate-800">
-      <div className={`${CONTAINER} flex flex-col md:flex-row`}>
+      <div className={`${CONTAINER} flex flex-col md:flex-row py-36`}>
         <div className="md:w-1/2">
           {skills.map((skill, index) => (
             <div
