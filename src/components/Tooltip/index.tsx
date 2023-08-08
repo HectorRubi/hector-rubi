@@ -25,10 +25,10 @@ export const Tooltip = ({
     <div
       className={`invisible absolute bottom-full flex w-fit flex-col justify-center group-hover:visible ${positionClasses()}`}
     >
-      <span className="block rounded bg-black px-3 py-2 text-xs text-white">
+      <span className="block rounded bg-black px-3 py-2 text-xs text-white dark:bg-white dark:text-black">
         {text}
       </span>
-      <div className="mx-2 w-2 border-l-4 border-r-4 border-t-8 border-l-transparent border-r-transparent border-t-black"></div>
+      <div className="mx-2 w-2 border-l-4 border-r-4 border-t-8 border-l-transparent border-r-transparent border-t-black dark:border-t-white"></div>
     </div>
   )
 }
