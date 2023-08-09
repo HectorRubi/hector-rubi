@@ -16,11 +16,11 @@ const stats: Stats[] = [
 
 export const Stats = () => {
   return (
-    <div className="flex gap-10 mb-20">
+    <div className="mb-20 flex gap-10">
       {stats.map((stat, index) => (
         <p key={index} className="flex gap-4">
-          <span className="text-3xl">{stat.size}</span>
-          <span className="text-xs text-zinc-500 dark:text-zinc-400">
+          <span className="text-5xl">{stat.size}</span>
+          <span className="text-xs leading-loose text-zinc-500 dark:text-zinc-400">
             {stat.text.map((textLine) => (
               <>
                 {textLine}
