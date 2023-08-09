@@ -1,11 +1,14 @@
-import Image from 'next/image'
-import { CONTAINER } from '../constants'
 import { Stats } from './Stats'
+import { HeroImage } from './HeroImage'
+
+import { CONTAINER } from '../constants'
 
 export const Hero = () => {
   return (
-    <section className="bg-primary-400 dark:bg-primary-900">
-      <div className={`${CONTAINER} flex flex-col md:flex-row`}>
+    <section className="bg-primary-300 dark:bg-primary-800">
+      <div
+        className={`${CONTAINER} flex flex-col items-center justify-center md:flex-row`}
+      >
         <div className="md:w-1/2">
           <div className="my-36 ml-40">
             <p className="text-md mb-12 inline-block rounded bg-accent-500 px-3 py-1 text-white shadow">
@@ -24,9 +27,8 @@ export const Hero = () => {
 
           <Stats />
         </div>
-        <div className="h-96 md:w-1/2">
-          <Image src="/next.svg" alt="hero-image" width={700} height={100} />
-        </div>
+
+        <HeroImage />
       </div>
     </section>
   )
