@@ -1,3 +1,10 @@
+const colors = require('tailwindcss/colors')
+delete colors.lightBlue
+delete colors.warmGray
+delete colors.trueGray
+delete colors.coolGray
+delete colors.blueGray
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -6,14 +13,14 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    colors: ({ colors }) => ({
+    colors: {
       ...colors,
       accent: colors.lime,
       // For background color
       primary: colors.slate,
       // For text color
       secondary: colors.zinc,
-    }),
+    },
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

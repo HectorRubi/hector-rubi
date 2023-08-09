@@ -31,11 +31,11 @@ const links: Link[] = [
 
 export const Navbar = () => {
   return (
-    <nav className="bg-primary-400 dark:bg-primary-900">
+    <nav className="bg-primary-300 dark:bg-primary-800">
       <div className={`${CONTAINER} flex items-center justify-between py-16`}>
         <h3 className="text-2xl">
           <span>Hector </span>
-          <span className="text-secondary-600 dark:text-secondary-500">
+          <span className="text-secondary-600 dark:text-secondary-400">
             Rubí
           </span>
         </h3>
@@ -53,7 +53,7 @@ export const Navbar = () => {
                   className={`mr-2 text-lg transition-all group-hover:text-accent-400`}
                 />
                 <span
-                  className={`text-sm text-secondary-600 transition-all group-hover:text-accent-400 dark:text-secondary-500`}
+                  className={`text-sm text-secondary-600 transition-all group-hover:text-accent-400 dark:text-secondary-400`}
                 >
                   {link.name}
                 </span>
