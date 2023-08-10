@@ -7,7 +7,6 @@ import {
   IconDefinition,
 } from '@fortawesome/free-brands-svg-icons'
 import { faGear } from '@fortawesome/free-solid-svg-icons'
-import { platform } from 'os'
 
 export type TopicNames =
   | 'JavaScript'
@@ -24,14 +23,14 @@ export type Course = {
   badge: string
 }
 
-export type Topic = {
+export type CertificationsGroup = {
   name: TopicNames
   icon: IconDefinition
   color: string
   courses: Course[]
 }
 
-export const topics: Topic[] = [
+export const certifications: CertificationsGroup[] = [
   {
     name: 'JavaScript',
     icon: faSquareJs,

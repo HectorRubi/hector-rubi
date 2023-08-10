@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { CONTAINER } from '../constants'
-import { topics, Topic, Course } from './data'
+import { certifications } from '../../data/certifications'
 
 export const Certifications = () => {
   return (
@@ -15,27 +15,29 @@ export const Certifications = () => {
           </p>
         </div>
 
-        {topics.map((topic: Topic, topicKey: number) => (
+        {certifications.map((certification, certificationIndex) => (
           <div
-            key={topicKey}
+            key={certificationIndex}
             className="mb-2 flex flex-col items-center md:mb-5 md:flex-row"
           >
             <div className="mb-5 text-center md:w-1/3 md:pl-24">
-              <span className={`mb-2 block text-5xl ${topic.color}`}>
-                <FontAwesomeIcon icon={topic.icon} />
+              <span className={`mb-2 block text-5xl ${certification.color}`}>
+                <FontAwesomeIcon icon={certification.icon} />
               </span>
-              <span className="block text-accent-500">{topic.name}</span>
+              <span className="block text-accent-500">
+                {certification.name}
+              </span>
             </div>
 
             <div className="ml-6 md:ml-0 md:w-2/3">
-              {topic.courses.map((course: Course, courseKey: number) => (
-                <div key={courseKey} className="mb-4 flex items-center">
+              {certification.courses.map((course, courseIndex) => (
+                <div key={courseIndex} className="mb-4 flex items-center">
                   <Image
                     width={40}
                     height={40}
                     className="mr-3 max-h-[40px]"
                     src={course.badge}
-                    alt="platzi"
+                    alt={certification.name}
                   />
                   <div>
                     <p className="text-xs">{course.platform}</p>
