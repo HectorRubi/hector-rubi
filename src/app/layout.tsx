@@ -1,4 +1,5 @@
 import './globals.css'
+import Script from 'next/script'
 import type { Metadata } from 'next'
 
 import { config } from '@fortawesome/fontawesome-svg-core'
@@ -16,6 +17,22 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        {/* <!-- Google tag (gtag.js) --> */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-RJFG3GMNZ1"
+        />
+        <Script id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-RJFG3GMNZ1');
+          `}
+        </Script>
+      </head>
       <body>{children}</body>
     </html>
   )
