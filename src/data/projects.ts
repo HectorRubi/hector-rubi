@@ -1,9 +1,4 @@
-export type Project = {
-  name: string
-  stack: string[]
-  image: string
-  link: string
-}
+import { Project } from '../types/project'
 
 export const projects: Project[] = [
   {

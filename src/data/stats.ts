@@ -1,7 +1,4 @@
-export type Stat = {
-  size: number
-  text: string[]
-}
+import { Stat } from '../types/stat'
 
 export const stats: Stat[] = [
   {

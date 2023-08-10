@@ -2,17 +2,11 @@ import {
   faDatabase,
   faCode,
   faTerminal,
-  IconDefinition,
 } from '@fortawesome/free-solid-svg-icons'
 
-export type Skills = {
-  name: string
-  description: string
-  stat: number
-  icon: IconDefinition
-}
+import { Skill } from '../types/skill'
 
-export const skills: Skills[] = [
+export const skills: Skill[] = [
   {
     name: 'Front-End',
     description: 'Create web pages with coding super smooth.',

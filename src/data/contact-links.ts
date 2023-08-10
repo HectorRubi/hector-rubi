@@ -1,14 +1,6 @@
-import {
-  faLinkedin,
-  faGithub,
-  IconDefinition,
-} from '@fortawesome/free-brands-svg-icons'
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 
-export type ContactLink = {
-  name: string
-  url: string
-  icon: IconDefinition
-}
+import { ContactLink } from '../types/contact-link'
 
 export const contactLinks: ContactLink[] = [
   {
