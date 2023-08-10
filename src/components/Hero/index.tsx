@@ -9,8 +9,8 @@ export const Hero = () => {
       <div
         className={`${CONTAINER} flex flex-col items-center justify-center md:flex-row`}
       >
-        <div className="w-full md:w-1/2">
-          <div className="mt-36 lg:ml-10">
+        <div className="w-full pt-36 md:w-1/2">
+          <div className="lg:ml-10">
             <p className="text-md mb-12 inline-block rounded bg-accent-500 px-3 py-1 text-white shadow">
               Full Stack Developer
             </p>
@@ -28,7 +28,7 @@ export const Hero = () => {
           <Stats />
         </div>
 
-        <div className="relative hidden md:block md:w-1/2">
+        <div className="relative hidden md:block md:w-1/2 2xl:pt-36">
           <HeroImage />
         </div>
       </div>
