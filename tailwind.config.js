@@ -23,7 +23,14 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-radial-top':
+          'radial-gradient(circle 400px at top, var(--tw-gradient-stops))',
+        'gradient-radial-left':
+          'radial-gradient(circle 400px at center left, var(--tw-gradient-stops))',
+        'gradient-radial-right':
+          'radial-gradient(circle 400px at center right, var(--tw-gradient-stops))',
+        'gradient-radial-center':
+          'radial-gradient(circle 400px at center, var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },

@@ -38,7 +38,7 @@ const skills: Skills[] = [
 
 export const Description = () => {
   return (
-    <section className="bg-primary-400 dark:bg-primary-900">
+    <section className="bg-gradient-radial-center from-primary-400/50 to-primary-400 dark:from-primary-800 dark:to-primary-900">
       <div className={`${CONTAINER} flex flex-col-reverse py-36 md:flex-row`}>
         <div className="md:w-1/2">
           {skills.map((skill, index) => (

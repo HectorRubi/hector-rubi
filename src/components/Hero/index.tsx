@@ -5,7 +5,7 @@ import { CONTAINER } from '../constants'
 
 export const Hero = () => {
   return (
-    <section className="bg-primary-300 dark:bg-primary-800">
+    <section className="bg-gradient-radial-left from-primary-200 to-primary-300  dark:from-primary-700 dark:to-primary-800">
       <div
         className={`${CONTAINER} flex flex-col items-center justify-center md:flex-row`}
       >

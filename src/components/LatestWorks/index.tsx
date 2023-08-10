@@ -34,7 +34,7 @@ const latestWorks: LatestWorks[] = [
 
 export const LatestWorks = () => {
   return (
-    <section className="bg-primary-400 dark:bg-primary-900">
+    <section className="bg-gradient-radial-right from-primary-400/50 to-primary-400 dark:from-primary-800 dark:to-primary-900">
       <div
         className={`${CONTAINER} grid grid-cols-1 gap-10 px-5 py-36 lg:grid-cols-2 lg:grid-rows-4 lg:gap-x-12 lg:gap-y-24`}
       >
