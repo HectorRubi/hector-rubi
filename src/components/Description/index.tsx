@@ -30,30 +30,30 @@ const skills: Skills[] = [
 
 export const Description = () => {
   return (
-    <section className="bg-slate-300 dark:bg-slate-800">
-      <div className={`${CONTAINER} flex flex-col md:flex-row py-36`}>
+    <section className="bg-primary-400 dark:bg-primary-900">
+      <div className={`${CONTAINER} flex flex-col py-36 md:flex-row`}>
         <div className="md:w-1/2">
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="bg-slate-400 dark:bg-slate-900 p-10 rounded-lg mb-2 shadow-none hover:shadow-2xl shadow-black dark:shadow-white transition-all hover:-translate-y-1 hover:z-10"
+              className="mb-2 rounded-lg bg-primary-300 p-10 shadow-none transition-all hover:z-10 hover:-translate-y-1 hover:shadow-2xl hover:shadow-black/50 dark:bg-primary-800 dark:shadow-white"
             >
-              <h3 className="relative text-xl text-blue-800 dark:text-blue-400 mb-2">
+              <h3 className="relative mb-2 text-xl text-accent-600 drop-shadow-sm dark:text-accent-400">
                 {skill.name}
               </h3>
-              <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-4">
+              <p className="mb-4 text-sm text-zinc-600 dark:text-zinc-400">
                 {skill.description}
               </p>
               <p className="text-sm">{skill.stat}</p>
             </div>
           ))}
         </div>
-        <div className="md:w-1/2 px-40 mb-8 md:mb-0">
-          <h2 className="text-zinc-600 dark:text-zinc-400 mb-8">Introduce</h2>
-          <h3 className="text-2xl md:text-4xl text-bold mb-12">
+        <div className="mb-8 px-40 md:mb-0 md:w-1/2">
+          <h2 className="mb-8 text-zinc-600 dark:text-zinc-400">Introduce</h2>
+          <h3 className="text-bold mb-12 text-2xl md:text-4xl">
             Hello! I&apos;m Hector Rubí
           </h3>
-          <p className="mb-8 italic text-2xl text-zinc-800 dark:text-zinc-200">
+          <p className="mb-8 text-2xl italic text-zinc-800 dark:text-zinc-200">
             Every great software begin with an even better idea
           </p>
           <p className="text-zinc-600 dark:text-zinc-400">
