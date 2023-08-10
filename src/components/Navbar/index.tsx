@@ -31,8 +31,8 @@ const links: Link[] = [
 
 export const Navbar = () => {
   return (
-    <nav className="bg-primary-300 dark:bg-primary-800">
-      <div className={`${CONTAINER} flex items-center justify-between py-16`}>
+    <nav className="bg-primary-400 dark:bg-primary-900">
+      <div className={`${CONTAINER} flex items-center justify-between py-10`}>
         <h3 className="text-2xl">
           <span>Hector </span>
           <span className="text-secondary-600 dark:text-secondary-400">
