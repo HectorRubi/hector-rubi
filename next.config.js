@@ -8,6 +8,12 @@ const nextConfig = {
         port: '',
         pathname: '/HectorRubi/hector-rubi/assets/68661875/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'static.platzi.com',
+        port: '',
+        pathname: '/media/achievements/**',
+      },
     ],
   },
 }

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { CONTAINER } from '../constants'
@@ -29,7 +30,7 @@ export const Certifications = () => {
             <div className="ml-6 md:ml-0 md:w-2/3">
               {topic.courses.map((course: Course, courseKey: number) => (
                 <div key={courseKey} className="mb-4 flex items-center">
-                  <img
+                  <Image
                     width={40}
                     height={40}
                     className="mr-3 max-h-[40px]"
