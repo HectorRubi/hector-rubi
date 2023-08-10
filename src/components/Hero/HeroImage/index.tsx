@@ -49,7 +49,7 @@ export const HeroImage = () => {
           />
         </div>
 
-        <div className="absolute right-0 top-1/4 flex items-center justify-center rounded-full bg-primary-400 p-4 text-blue-500 shadow-2xl dark:bg-primary-900 lg:p-6">
+        <div className="absolute right-0 top-1/4 flex items-center justify-center rounded-full bg-primary-400 p-4 text-blue-500 shadow-2xl dark:bg-primary-900 lg:p-6 2xl:mr-10">
           <FontAwesomeIcon
             icon={faReact}
             className="h-14 w-14 lg:h-16 lg:w-16"
