@@ -1,6 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+
 import { CONTAINER } from '../constants'
+import { contactLinks } from '../../data/contact-links'
 
 export const Footer = () => {
   return (
@@ -16,26 +18,16 @@ export const Footer = () => {
         </h3>
 
         <ul className="flex gap-3">
-          <li>
-            <a
-              href="https://www.linkedin.com/in/hector-rubi-garcia/"
-              className="group"
-            >
-              <FontAwesomeIcon
-                icon={faLinkedin}
-                className={`transition-all group-hover:text-accent-600 dark:group-hover:text-accent-400`}
-              />
-            </a>
-          </li>
-
-          <li>
-            <a href="https://github.com/HectorRubi" className="group">
-              <FontAwesomeIcon
-                icon={faGithub}
-                className={`transition-all group-hover:text-accent-600 dark:group-hover:text-accent-400`}
-              />
-            </a>
-          </li>
+          {contactLinks.map((link, linkIndex) => (
+            <li key={linkIndex}>
+              <a href={link.url} className="group">
+                <FontAwesomeIcon
+                  icon={link.icon}
+                  className={`transition-all group-hover:text-accent-600 dark:group-hover:text-accent-400`}
+                />
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
     </footer>
