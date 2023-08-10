@@ -1,33 +1,10 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import {
-  faLinkedin,
-  faGithub,
-  IconDefinition,
-} from '@fortawesome/free-brands-svg-icons'
 
 import { Tooltip } from './../Tooltip'
 
 import { CONTAINER } from '../constants'
-
-type Link = {
-  name: string
-  url: string
-  icon: IconDefinition
-}
-
-const links: Link[] = [
-  {
-    name: 'GitHub',
-    url: 'https://github.com/HectorRubi',
-    icon: faGithub,
-  },
-  {
-    name: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/hector-rubi-garcia/',
-    icon: faLinkedin,
-  },
-]
+import { contactLinks } from '../../data/contact-links'
 
 export const Navbar = () => {
   return (
@@ -41,7 +18,7 @@ export const Navbar = () => {
         </h3>
 
         <ul className="flex items-center gap-5">
-          {links.map((link, linkKey) => (
+          {contactLinks.map((link, linkKey) => (
             <li key={linkKey}>
               <a
                 href={link.url}
