@@ -9,8 +9,8 @@ export const Hero = () => {
       <div
         className={`${CONTAINER} flex flex-col items-center justify-center md:flex-row`}
       >
-        <div className="md:w-1/2">
-          <div className="my-36 ml-40">
+        <div className="w-full md:w-1/2">
+          <div className="mt-36 lg:ml-10">
             <p className="text-md mb-12 inline-block rounded bg-accent-500 px-3 py-1 text-white shadow">
               Full Stack Developer
             </p>
@@ -19,7 +19,7 @@ export const Hero = () => {
               <br />
               Show me the code
             </h2>
-            <p className="text-md text-zinc-500 dark:text-zinc-400">
+            <p className="text-md mb-20 text-zinc-500 dark:text-zinc-400 lg:mb-36">
               I code beautifully simple things, <br />
               and I love what I do.
             </p>
@@ -28,7 +28,9 @@ export const Hero = () => {
           <Stats />
         </div>
 
-        <HeroImage />
+        <div className="relative hidden md:block md:w-1/2">
+          <HeroImage />
+        </div>
       </div>
     </section>
   )
