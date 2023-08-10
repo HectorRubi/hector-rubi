@@ -1,10 +1,18 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faDatabase,
+  faCode,
+  faTerminal,
+  IconDefinition,
+} from '@fortawesome/free-solid-svg-icons'
+
 import { CONTAINER } from '../constants'
 
 type Skills = {
   name: string
   description: string
   stat: string
-  icon: string
+  icon: IconDefinition
 }
 
 const skills: Skills[] = [
@@ -12,19 +20,19 @@ const skills: Skills[] = [
     name: 'Front-End',
     description: 'Create web pages with coding super smooth.',
     stat: '10 Projects',
-    icon: 'fa-solid fa-code',
+    icon: faCode,
   },
   {
     name: 'Back-End',
     description: 'I develop back-end with smart thinking.',
     stat: '5 Projects',
-    icon: 'fa-solid fa-terminal',
+    icon: faTerminal,
   },
   {
     name: 'Database',
     description: 'I know store data on easy way.',
     stat: '1 Projects',
-    icon: 'fa-solid fa-database',
+    icon: faDatabase,
   },
 ]
 
@@ -38,9 +46,12 @@ export const Description = () => {
               key={index}
               className="mb-2 rounded-lg bg-primary-300 p-10 shadow-none transition-all hover:z-10 hover:-translate-y-1 hover:shadow-2xl hover:shadow-black/50 dark:bg-primary-800 dark:shadow-white"
             >
-              <h3 className="relative mb-2 text-xl text-accent-600 drop-shadow-sm dark:text-accent-400">
-                {skill.name}
-              </h3>
+              <div className="flex items-center justify-between text-xl text-accent-600 drop-shadow-sm dark:text-accent-400">
+                <h3 className="relative mb-2">{skill.name}</h3>
+                <span>
+                  <FontAwesomeIcon icon={skill.icon} />
+                </span>
+              </div>
               <p className="mb-4 text-sm text-zinc-600 dark:text-zinc-400">
                 {skill.description}
               </p>
