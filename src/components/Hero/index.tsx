@@ -19,7 +19,7 @@ export const Hero = () => {
               <br />
               Show me the code
             </h2>
-            <p className="text-md mb-20 text-zinc-500 dark:text-zinc-400 lg:mb-36">
+            <p className="text-md mb-20 text-secondary-500 dark:text-secondary-400 lg:mb-36">
               I code beautifully simple things, <br />
               and I love what I do.
             </p>

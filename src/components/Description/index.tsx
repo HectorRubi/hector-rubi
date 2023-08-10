@@ -52,7 +52,7 @@ export const Description = () => {
                   <FontAwesomeIcon icon={skill.icon} />
                 </span>
               </div>
-              <p className="mb-8 text-base text-zinc-600 dark:text-zinc-400">
+              <p className="mb-8 text-base text-secondary-600 dark:text-secondary-400">
                 {skill.description}
               </p>
               <p className="text-sm">{`${skill.stat} Project${
@@ -62,14 +62,16 @@ export const Description = () => {
           ))}
         </div>
         <div className="mb-16 md:mb-0 md:w-1/2 md:px-10 lg:px-20 xl:px-28 2xl:px-40">
-          <h2 className="mb-8 text-zinc-600 dark:text-zinc-400">Description</h2>
+          <h2 className="mb-8 text-secondary-600 dark:text-secondary-400">
+            Description
+          </h2>
           <h3 className="text-bold mb-12 text-4xl xl:text-5xl">
             Hello! I&apos;m Hector Rubí
           </h3>
-          <p className="mb-8 text-2xl italic text-zinc-800 dark:text-zinc-200">
+          <p className="mb-8 text-2xl italic text-secondary-800 dark:text-secondary-200">
             Every great software begin with an even better idea
           </p>
-          <p className="text-lg text-zinc-600 dark:text-zinc-400">
+          <p className="text-lg text-secondary-600 dark:text-secondary-400">
             Since beginning my journey nearly 4 years ago, I&apos;ve work for
             different companies and collaborated with talented people to create
             digital products. I&apos;m curious, keep permanently learning and
