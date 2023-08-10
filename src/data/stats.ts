@@ -1,0 +1,15 @@
+export type Stat = {
+  size: number
+  text: string[]
+}
+
+export const stats: Stat[] = [
+  {
+    size: 4,
+    text: ['YEARS', 'EXPERIENCE'],
+  },
+  {
+    size: 10,
+    text: ['PROJECTS COMPLETED', 'ON 1 COUNTRIES'],
+  },
+]

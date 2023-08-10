@@ -1,18 +1,4 @@
-type Stats = {
-  size: number
-  text: string[]
-}
-
-const stats: Stats[] = [
-  {
-    size: 4,
-    text: ['YEARS', 'EXPERIENCE'],
-  },
-  {
-    size: 10,
-    text: ['PROJECTS COMPLETED', 'ON 1 COUNTRIES'],
-  },
-]
+import { stats } from '../../../data/stats'
 
 export const Stats = () => {
   return (
