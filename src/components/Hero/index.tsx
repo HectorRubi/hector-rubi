@@ -29,7 +29,11 @@ export const Hero = () => {
         </div>
 
         <div className="relative hidden md:block md:w-1/2 2xl:pt-36">
-          <HeroImage />
+          <HeroImage
+            bgCircle="fill-primary-400 dark:fill-primary-900"
+            bgIcons="fill-primary-500 dark:fill-primary-950"
+            bgAccent="fill-accent-500"
+          />
         </div>
       </div>
     </section>

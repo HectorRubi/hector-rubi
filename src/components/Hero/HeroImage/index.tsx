@@ -1,61 +1,337 @@
 'use client'
-import Image from 'next/image'
 import { useRef } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faAngular,
-  faReact,
-  faNodeJs,
-} from '@fortawesome/free-brands-svg-icons'
 import { useDimensions } from './useDimensions'
 
-export const HeroImage = () => {
-  const circle = useRef<HTMLDivElement>(null)
-  const { dimensions } = useDimensions(circle)
+export const HeroImage = ({
+  bgCircle,
+  bgIcons,
+  bgAccent,
+}: {
+  bgCircle: string
+  bgIcons: string
+  bgAccent: string
+}) => {
+  const divRef = useRef<HTMLDivElement>(null)
+  const { dimensions } = useDimensions(divRef)
 
   return (
-    <>
-      {/* Back circle */}
-      <div
-        className="top-0 mx-auto w-full rounded-full bg-gradient-to-tl from-primary-300 to-primary-400 shadow dark:from-primary-800 dark:to-primary-900"
-        style={{ height: dimensions.width + 'px' }}
-        ref={circle}
-      ></div>
-
-      {/* Profile */}
-      <div className="absolute bottom-0 mb-5 w-full">
-        <Image
-          src={'/hoodie.svg'}
-          alt={'profile'}
-          className="mx-auto w-3/5"
-          width={500}
-          height={500}
-        />
-      </div>
-
-      {/* Badges */}
-      <div className="absolute bottom-0 left-0 right-0 top-0 text-7xl">
-        <div className="absolute right-0 top-2/3 flex items-center justify-center rounded-full bg-primary-400 p-10 text-lime-500 shadow-2xl dark:bg-primary-900 lg:p-14">
-          <FontAwesomeIcon
-            icon={faNodeJs}
-            className="h-20 w-20 lg:h-28 lg:w-28"
-          />
-        </div>
-
-        <div className="absolute left-0 top-2/3 flex items-center justify-center rounded-full bg-primary-400 p-6 text-red-500 shadow-2xl dark:bg-primary-900 lg:p-10">
-          <FontAwesomeIcon
-            icon={faAngular}
-            className="h-16 w-16 lg:h-20 lg:w-20"
-          />
-        </div>
-
-        <div className="absolute right-0 top-1/4 flex items-center justify-center rounded-full bg-primary-400 p-4 text-blue-500 shadow-2xl dark:bg-primary-900 lg:p-6 2xl:mr-10">
-          <FontAwesomeIcon
-            icon={faReact}
-            className="h-14 w-14 lg:h-16 lg:w-16"
-          />
-        </div>
-      </div>
-    </>
+    <div className="flex w-full items-center justify-end" ref={divRef}>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width={dimensions.width}
+        height={dimensions.width}
+        fill="none"
+        viewBox="0 0 756 756"
+      >
+        <g id="Hero">
+          <g id="MainCircle" filter="url(#filter0_d_1_3)">
+            <circle cx="378" cy="378" r="350" className={bgCircle}></circle>
+          </g>
+          <circle
+            id="Ellipse1"
+            cx="48.5"
+            cy="130.5"
+            r="8.5"
+            className={bgAccent}
+          ></circle>
+          <circle
+            id="Ellipse2"
+            cx="378"
+            cy="11"
+            r="5"
+            className={bgIcons}
+          ></circle>
+          <g id="Hoodie" clipPath="url(#clip0_1_3)">
+            <g id="layer1">
+              <path
+                id="path2997"
+                fill="url(#paint0_linear_1_3)"
+                d="M145.184 755.984l18.822-4.09 27.824 1.636-2.455-31.904 6.547-9.816-3.273-30.267 11.456-58.08.819-27.814 6.546-21.268 7.365-32.722.819-25.358 10.638-20.451 4.092-5.726s3.273 100.617 4.091 103.89c.819 3.272 3.274 1.636 3.274 8.181 0 6.544 5.728 59.717 8.183 75.259 2.455 15.542 10.639 52.354 12.275 57.261 1.637 4.908 3.274 13.907 3.274 13.907s91.654-21.269 124.387-15.543c32.733 5.726 104.747 16.362 104.747 16.362l16.368-35.175 1.637-22.087 9.001-103.073 4.91-98.981s12.275 20.451 13.094 28.632c.818 8.18 0 31.903 2.455 38.448 2.454 6.544 10.638 50.718 12.274 62.17 1.637 11.453 3.274 31.086 4.911 39.267 1.636 8.18-3.274 58.079-3.274 58.079l5.729 38.448h54.828s4.092-22.904 4.91-26.176c.818-3.272 6.547-22.905 6.547-22.905l-4.092-89.982-18.822-122.704-28.643-90.801s-27.005-49.901-30.278-54.808c-3.274-4.908-13.094-13.907-15.549-19.633-2.454-5.726-71.195-36.811-71.195-36.811l23.704-36.814-33.555-63.797-36.828-44.993s-31.097-24.54-34.37-23.722c-3.273.818-31.096 26.996-31.096 26.996l-54.829 69.531s-11.456 24.541-10.638 30.268c.818 5.726 6.547 22.087 9.002 26.996l8.183 16.361-76.923 51.536-34.37 61.353-39.281 103.891-9.001 71.987-7.365 61.353-4.092 56.444s5.728 16.361 6.547 19.633c.818 3.272 11.456 37.63 10.638 37.63l.032-.018z"
+              ></path>
+              <path
+                id="path3001"
+                fill="#369"
+                d="M235.092 353.006l-4.709 1.063s5.286 23.664 9.569 48.436c2.142 12.386 4.028 25.046 4.861 35.075.417 5.015.544 9.393.354 12.653-.19 3.261-.982 5.423-1.113 5.568l3.595 3.239c1.914-2.105 2.166-4.903 2.379-8.554.213-3.651.073-8.164-.354-13.311-.855-10.293-2.757-23.018-4.911-35.479-4.31-24.925-9.671-48.69-9.671-48.69z"
+              ></path>
+              <path
+                id="path3003"
+                fill="#369"
+                d="M529.162 346.074s-6.79 17.115-12.051 38.771c-5.261 21.654-9.197 47.856-2.734 66.809l4.608-1.569c-5.811-17.04-2.338-42.784 2.835-64.075 5.173-21.292 11.848-38.112 11.848-38.112l-4.506-1.822v-.002z"
+              ></path>
+              <path
+                id="path3005"
+                fill="#369"
+                d="M295.04 590.07l-26.176 90.799 4.658 1.367 26.182-90.78-4.658-1.367-.006-.019z"
+              ></path>
+              <path
+                id="path3007"
+                fill="#369"
+                d="M463.397 592.548l-4.709 1.265 24.556 91.609 4.709-1.214-24.556-91.66z"
+              ></path>
+              <path
+                id="path3009"
+                fill="#369"
+                d="M383.504 584.353c-6.772.094-13.56.325-20.05.607-25.963 1.128-47.492 3.391-47.492 3.391l.506 4.809s21.442-2.22 47.239-3.341c25.797-1.121 56.066-1.043 73.011 3.29l1.215-4.707c-13.682-3.499-34.112-4.332-54.429-4.049z"
+              ></path>
+              <path
+                id="path3011"
+                fill="#369"
+                d="M141.482 713.517l-.81 4.758 43.391 7.389.81-4.808-43.391-7.339z"
+              ></path>
+              <path
+                id="path3013"
+                fill="#369"
+                d="M605.425 717.518c-5.089.156-11.503.649-17.772 1.265-12.537 1.233-24.608 2.885-24.608 2.885l.659 4.808s12.033-1.613 24.455-2.834c6.211-.611 12.483-1.115 17.367-1.265 2.442-.075 4.553-.071 6.026.05.736.061 1.338.171 1.67.253.333.083.345.243-.05-.151l3.443-3.442c-.805-.804-1.494-.932-2.228-1.114-.734-.181-1.533-.28-2.43-.354-1.795-.147-3.987-.179-6.532-.101z"
+              ></path>
+              <path
+                id="path3015"
+                fill="#369"
+                d="M364.774 336.713s-2.644 6.3-5.671 12.653c-1.513 3.177-3.083 6.359-4.455 8.706-.686 1.173-1.322 2.158-1.772 2.733-.451.575-1.099.527.202.202-2.376.594-5.742 2.074-8.607 4.809-1.433 1.367-2.778 3.122-3.241 5.415-.463 2.293.218 4.93 1.874 7.137 1.869 2.491 4.827 4.511 8.607 7.035 3.78 2.523 8.276 5.297 12.607 7.997 4.331 2.699 8.518 5.344 11.544 7.592 1.513 1.123 2.736 2.158 3.494 2.935.757.778.851 1.401.759.759.345 2.415.601 8.176.304 13.818-.297 5.642-1.301 11.458-2.43 13.716-.323.646-2.84 3.853-6.076 7.238-3.236 3.385-7.324 7.322-11.291 11.084-7.934 7.525-15.443 14.273-15.443 14.273l4.304 4.859s7.571-6.816 15.595-14.425c4.011-3.804 8.131-7.82 11.493-11.337 3.362-3.517 5.876-6.13 7.19-8.756 2.144-4.286 2.772-10.333 3.088-16.349.317-6.015.17-11.72-.304-15.032-.296-2.073-1.368-3.158-2.531-4.352-1.164-1.194-2.633-2.403-4.304-3.644-3.341-2.482-7.585-5.176-11.949-7.896-4.364-2.72-8.845-5.435-12.455-7.845-3.611-2.411-6.452-4.787-7.038-5.568-.8-1.066-.758-1.48-.658-1.974.099-.493.498-1.244 1.316-2.024 1.635-1.561 4.824-2.964 5.721-3.189 2.12-.53 2.533-1.512 3.291-2.48s1.507-2.122 2.279-3.442c1.543-2.638 3.203-5.946 4.759-9.211 3.111-6.531 5.772-12.906 5.772-12.906l-5.974-2.531z"
+              ></path>
+              <path
+                id="path3017"
+                fill="#369"
+                d="M395.153 346.317L382.9 370.004l-.607 1.215.405 1.265s1.451 4.652 3.797 9.769c2.346 5.116 5.066 10.883 10.127 13.412 2.597 1.298 9.349 6.06 15.037 10.325 4.874 3.654 7.936 6.097 9.063 6.985l-7.848 51.322 6.38.962 8.202-53.195.254-1.822-1.469-1.164s-4.915-3.926-10.683-8.25c-5.768-4.325-12.101-8.959-16.05-10.933-1.486-.742-4.934-5.625-7.089-10.325-1.878-4.096-2.787-6.981-3.088-7.895l11.594-22.422-5.772-2.936z"
+              ></path>
+              <path
+                id="path3019"
+                fill="#369"
+                d="M372.681 343.175c0 1.688-.625 3.306-1.737 4.499-1.113 1.194-2.621 1.864-4.194 1.864s-3.082-.67-4.194-1.864c-1.113-1.193-1.737-2.811-1.737-4.499 0-1.687.624-3.306 1.737-4.499 1.112-1.193 2.621-1.864 4.194-1.864s3.081.671 4.194 1.864c1.112 1.193 1.737 2.812 1.737 4.499z"
+              ></path>
+              <path
+                id="path3021"
+                fill="#369"
+                d="M405.652 348.52c0 1.572-.594 3.08-1.652 4.192-1.058 1.112-2.493 1.737-3.99 1.737-1.496 0-2.931-.625-3.989-1.737a6.085 6.085 0 01-1.652-4.192c0-1.573.594-3.081 1.652-4.193 1.058-1.111 2.493-1.736 3.989-1.736 1.497 0 2.932.625 3.99 1.736a6.086 6.086 0 011.652 4.193z"
+              ></path>
+              <path
+                id="path3835"
+                fill="#369"
+                d="M368.339 189.538s-30.089 3.471-38.191 14.461c-8.101 10.99-24.303 20.823-23.724 36.441.578 15.618 5.786 24.295 12.73 30.658 6.944 6.363 65.387 60.736 65.387 60.736s16.781-6.941 23.146-16.774c6.366-9.834 27.197-51.482 31.248-63.051 4.051-11.568 10.994-28.921 5.208-37.019-5.787-8.098-25.46-23.138-35.298-24.873-9.837-1.735-40.506-.579-40.506-.579z"
+              ></path>
+            </g>
+          </g>
+          <g id="Angular">
+            <g id="AngularCircle" filter="url(#filter1_d_1_3)">
+              <circle
+                cx="655.5"
+                cy="226.5"
+                r="60.5"
+                className={bgIcons}
+              ></circle>
+            </g>
+            <g id="AngularIcon">
+              <path
+                id="Vector"
+                fill="#DC2626"
+                d="M650.153 228.203h10.744l-5.372-13.059-5.372 13.059zm5.372-33.661l-29.298 10.607 4.483 39.307 24.815 13.958 24.816-13.958 4.483-39.307-29.299-10.607zm18.358 48.731h-6.852l-3.694-9.324h-15.595l-3.694 9.324h-6.866l18.343-41.674 18.358 41.674z"
+              ></path>
+            </g>
+          </g>
+          <g id="JS">
+            <g id="JSCircle" filter="url(#filter2_d_1_3)">
+              <circle cx="626" cy="599" r="115" className={bgIcons}></circle>
+            </g>
+            <g id="JSIcon" clipPath="url(#clip1_1_3)">
+              <path
+                id="Vector_2"
+                fill="#FACC15"
+                d="M575.4 547.48v103.04h101.2V547.48H575.4zm55.073 80.362c0 10.028-5.783 14.605-14.209 14.605-7.613 0-12.017-4.002-14.276-8.855l7.748-4.761c1.491 2.691 2.846 4.968 6.121 4.968 3.118 0 5.106-1.242 5.106-6.095v-32.913h9.51v33.051zm22.499 14.605c-8.833 0-14.548-4.278-17.326-9.89l7.748-4.554c2.033 3.381 4.698 5.888 9.374 5.888 3.931 0 6.461-2.001 6.461-4.784 0-3.312-2.575-4.485-6.935-6.44l-2.372-1.035c-6.867-2.967-11.408-6.716-11.408-14.605 0-7.268 5.444-12.788 13.915-12.788 6.054 0 10.392 2.139 13.509 7.751l-7.409 4.83c-1.627-2.967-3.389-4.14-6.122-4.14-2.779 0-4.541 1.794-4.541 4.14 0 2.898 1.762 4.071 5.851 5.888l2.372 1.035c8.087 3.519 12.627 7.13 12.627 15.226 0 8.694-6.731 13.478-15.744 13.478z"
+              ></path>
+            </g>
+          </g>
+          <g id="React">
+            <g id="ReactCircle" filter="url(#filter3_d_1_3)">
+              <circle
+                cx="93.5"
+                cy="512.5"
+                r="80.5"
+                className={bgIcons}
+              ></circle>
+            </g>
+            <g id="ReactIcon" clipPath="url(#clip2_1_3)">
+              <path
+                id="Vector_3"
+                fill="#38BDF8"
+                d="M118.502 499.186a86.382 86.382 0 00-2.737-.862c.152-.625.287-1.25.423-1.875 2.078-10.07.709-18.163-3.903-20.833-4.444-2.551-11.692.101-19.025 6.488a46.267 46.267 0 00-2.112 1.943c-.456-.439-.93-.878-1.403-1.301-7.687-6.826-15.392-9.698-20.005-7.012-4.426 2.569-5.744 10.189-3.886 19.718.186.946.389 1.875.626 2.822a49.5 49.5 0 00-3.143.996c-9.023 3.126-15.494 8.06-15.494 13.162 0 5.272 6.894 10.56 16.271 13.771.76.253 1.52.507 2.298.726a61.086 61.086 0 00-.676 3.041c-1.774 9.378-.389 16.812 4.038 19.363 4.562 2.636 12.233-.067 19.701-6.606a52.95 52.95 0 001.774-1.639c.744.727 1.52 1.419 2.298 2.095 7.231 6.218 14.378 8.735 18.788 6.184 4.562-2.636 6.049-10.628 4.123-20.36a71.098 71.098 0 00-.507-2.281c.541-.152 1.064-.321 1.588-.49 9.749-3.227 16.812-8.448 16.812-13.804 0-5.119-6.657-10.086-15.849-13.246zm-22.86-14.345c6.285-5.474 12.148-7.62 14.818-6.082 2.855 1.639 3.953 8.262 2.163 16.963a27.874 27.874 0 01-.389 1.69 86.49 86.49 0 00-11.371-1.791 85.386 85.386 0 00-7.198-8.972 67.035 67.035 0 011.977-1.808zm-19.549 36.36c.862 1.47 1.74 2.94 2.67 4.377a76.603 76.603 0 01-7.84-1.268c.744-2.433 1.673-4.95 2.754-7.518a112.145 112.145 0 002.416 4.409zm-5.12-20.325a83.876 83.876 0 017.706-1.318 99.656 99.656 0 00-2.603 4.291 99.707 99.707 0 00-2.399 4.393 80.508 80.508 0 01-2.703-7.366zm4.63 11.641a106.013 106.013 0 013.616-6.86 101.689 101.689 0 014.123-6.572 105.89 105.89 0 017.755-.288c2.636 0 5.238.102 7.755.288a118.067 118.067 0 014.106 6.538 115 115 0 013.666 6.826 111.972 111.972 0 01-3.649 6.894 115.307 115.307 0 01-4.089 6.589c-2.517.186-5.136.271-7.789.271-2.653 0-5.22-.085-7.704-.237a102.822 102.822 0 01-4.157-6.589 106.233 106.233 0 01-3.633-6.86zm30.515 8.651a117.369 117.369 0 002.466-4.512 78.326 78.326 0 012.856 7.485 74.05 74.05 0 01-7.941 1.352 113.753 113.753 0 002.619-4.325zm2.433-12.926a145.013 145.013 0 00-2.45-4.427 110.38 110.38 0 00-2.585-4.257c2.72.338 5.322.794 7.755 1.351a74.829 74.829 0 01-2.72 7.333zm-17.42-19.008a74.18 74.18 0 015.001 6.049 110.874 110.874 0 00-10.053 0 85.342 85.342 0 015.052-6.049zm-19.6-10.357c2.839-1.656 9.141.71 15.781 6.589.423.372.845.778 1.284 1.183a85.846 85.846 0 00-7.248 8.972 89.06 89.06 0 00-11.354 1.757c-.22-.862-.406-1.74-.591-2.619-1.589-8.177-.541-14.344 2.128-15.882zm-4.139 44.538a44.002 44.002 0 01-2.095-.659c-3.599-1.132-7.688-2.923-10.645-5.272a7.579 7.579 0 01-3.176-5.052c0-3.092 5.34-7.045 13.044-9.732a58.41 58.41 0 012.923-.929 89.9 89.9 0 004.14 10.746 92.33 92.33 0 00-4.191 10.898zm19.7 16.558a30.921 30.921 0 01-9.529 5.964 7.477 7.477 0 01-5.964.22c-2.686-1.555-3.802-7.519-2.28-15.544.185-.947.388-1.893.624-2.822a84.648 84.648 0 0011.473 1.656 89.163 89.163 0 007.299 9.022 43.692 43.692 0 01-1.622 1.504zm4.14-4.106a79.864 79.864 0 01-5.12-6.133c1.623.068 3.295.101 4.985.101 1.74 0 3.447-.033 5.136-.118a72.828 72.828 0 01-5 6.15zm22.083 5.069a7.509 7.509 0 01-2.788 5.288c-2.686 1.555-8.414-.473-14.598-5.778a71.375 71.375 0 01-2.145-1.943 83.634 83.634 0 007.13-9.056 83.405 83.405 0 0011.523-1.774c.169.692.321 1.385.456 2.061.828 3.649.963 7.451.422 11.202zm3.075-18.163c-.473.152-.946.304-1.436.439a86.035 86.035 0 00-4.308-10.78 85.397 85.397 0 004.139-10.627c.879.253 1.724.524 2.535.794 7.873 2.703 13.398 6.725 13.398 9.8 0 3.311-5.897 7.586-14.328 10.374zm-25.293-2.535a7.737 7.737 0 007.738-7.738 7.737 7.737 0 00-7.738-7.738 7.737 7.737 0 00-7.738 7.738 7.737 7.737 0 007.738 7.738z"
+              ></path>
+            </g>
+          </g>
+        </g>
+        <defs>
+          <filter
+            id="filter0_d_1_3"
+            width="726"
+            height="726"
+            x="15"
+            y="19"
+            colorInterpolationFilters="sRGB"
+            filterUnits="userSpaceOnUse"
+          >
+            <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
+            <feColorMatrix
+              in="SourceAlpha"
+              result="hardAlpha"
+              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+            ></feColorMatrix>
+            <feMorphology
+              in="SourceAlpha"
+              operator="dilate"
+              radius="3"
+              result="effect1_dropShadow_1_3"
+            ></feMorphology>
+            <feOffset dy="4"></feOffset>
+            <feGaussianBlur stdDeviation="5"></feGaussianBlur>
+            <feComposite in2="hardAlpha" operator="out"></feComposite>
+            <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix>
+            <feBlend
+              in2="BackgroundImageFix"
+              result="effect1_dropShadow_1_3"
+            ></feBlend>
+            <feBlend
+              in="SourceGraphic"
+              in2="effect1_dropShadow_1_3"
+              result="shape"
+            ></feBlend>
+          </filter>
+          <filter
+            id="filter1_d_1_3"
+            width="143"
+            height="143"
+            x="584"
+            y="159"
+            colorInterpolationFilters="sRGB"
+            filterUnits="userSpaceOnUse"
+          >
+            <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
+            <feColorMatrix
+              in="SourceAlpha"
+              result="hardAlpha"
+              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+            ></feColorMatrix>
+            <feMorphology
+              in="SourceAlpha"
+              operator="dilate"
+              radius="1"
+              result="effect1_dropShadow_1_3"
+            ></feMorphology>
+            <feOffset dy="4"></feOffset>
+            <feGaussianBlur stdDeviation="5"></feGaussianBlur>
+            <feComposite in2="hardAlpha" operator="out"></feComposite>
+            <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix>
+            <feBlend
+              in2="BackgroundImageFix"
+              result="effect1_dropShadow_1_3"
+            ></feBlend>
+            <feBlend
+              in="SourceGraphic"
+              in2="effect1_dropShadow_1_3"
+              result="shape"
+            ></feBlend>
+          </filter>
+          <filter
+            id="filter2_d_1_3"
+            width="252"
+            height="252"
+            x="500"
+            y="477"
+            colorInterpolationFilters="sRGB"
+            filterUnits="userSpaceOnUse"
+          >
+            <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
+            <feColorMatrix
+              in="SourceAlpha"
+              result="hardAlpha"
+              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+            ></feColorMatrix>
+            <feMorphology
+              in="SourceAlpha"
+              operator="dilate"
+              radius="1"
+              result="effect1_dropShadow_1_3"
+            ></feMorphology>
+            <feOffset dy="4"></feOffset>
+            <feGaussianBlur stdDeviation="5"></feGaussianBlur>
+            <feComposite in2="hardAlpha" operator="out"></feComposite>
+            <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix>
+            <feBlend
+              in2="BackgroundImageFix"
+              result="effect1_dropShadow_1_3"
+            ></feBlend>
+            <feBlend
+              in="SourceGraphic"
+              in2="effect1_dropShadow_1_3"
+              result="shape"
+            ></feBlend>
+          </filter>
+          <filter
+            id="filter3_d_1_3"
+            width="183"
+            height="183"
+            x="2"
+            y="425"
+            colorInterpolationFilters="sRGB"
+            filterUnits="userSpaceOnUse"
+          >
+            <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
+            <feColorMatrix
+              in="SourceAlpha"
+              result="hardAlpha"
+              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+            ></feColorMatrix>
+            <feMorphology
+              in="SourceAlpha"
+              operator="dilate"
+              radius="1"
+              result="effect1_dropShadow_1_3"
+            ></feMorphology>
+            <feOffset dy="4"></feOffset>
+            <feGaussianBlur stdDeviation="5"></feGaussianBlur>
+            <feComposite in2="hardAlpha" operator="out"></feComposite>
+            <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix>
+            <feBlend
+              in2="BackgroundImageFix"
+              result="effect1_dropShadow_1_3"
+            ></feBlend>
+            <feBlend
+              in="SourceGraphic"
+              in2="effect1_dropShadow_1_3"
+              result="shape"
+            ></feBlend>
+          </filter>
+          <linearGradient
+            id="paint0_linear_1_3"
+            x1="378.416"
+            x2="377.995"
+            y1="153.923"
+            y2="711.817"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stopColor="#2E81B9"></stop>
+            <stop offset="1" stopColor="#5991B7"></stop>
+          </linearGradient>
+          <clipPath id="clip0_1_3">
+            <path
+              fill="#fff"
+              d="M0 0H500V634H0z"
+              transform="translate(128 122)"
+            ></path>
+          </clipPath>
+          <clipPath id="clip1_1_3">
+            <path
+              fill="#fff"
+              d="M0 0H101.2V117.76H0z"
+              transform="translate(575.4 540.12)"
+            ></path>
+          </clipPath>
+          <clipPath id="clip2_1_3">
+            <path
+              fill="#fff"
+              d="M0 0H86.507V86.507H0z"
+              transform="translate(47.843 469.246)"
+            ></path>
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
   )
 }
