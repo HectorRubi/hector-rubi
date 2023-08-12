@@ -22,6 +22,7 @@ export const HeroImage = ({
         height={dimensions.width}
         fill="none"
         viewBox="0 0 756 756"
+        className="overflow-visible"
       >
         <g id="Hero">
           <g id="MainCircle" filter="url(#filter0_d_1_3)">
@@ -32,14 +33,14 @@ export const HeroImage = ({
             cx="48.5"
             cy="130.5"
             r="8.5"
-            className={bgAccent}
+            className={`${bgAccent} animate-[jump_1s_infinite]`}
           ></circle>
           <circle
             id="Ellipse2"
-            cx="378"
-            cy="11"
+            cx="578"
+            cy="51"
             r="5"
-            className={bgIcons}
+            className={`${bgAccent} animate-[jump_1s_infinite_200ms]`}
           ></circle>
           <g id="Hoodie" clipPath="url(#clip0_1_3)">
             <g id="layer1">
@@ -110,7 +111,7 @@ export const HeroImage = ({
               ></path>
             </g>
           </g>
-          <g id="Angular">
+          <g id="Angular" className="animate-[jump_3s_infinite]">
             <g id="AngularCircle" filter="url(#filter1_d_1_3)">
               <circle
                 cx="655.5"
@@ -127,7 +128,7 @@ export const HeroImage = ({
               ></path>
             </g>
           </g>
-          <g id="JS">
+          <g id="JS" className="animate-[jump_3s_infinite_400ms]">
             <g id="JSCircle" filter="url(#filter2_d_1_3)">
               <circle cx="626" cy="599" r="115" className={bgIcons}></circle>
             </g>
@@ -139,7 +140,7 @@ export const HeroImage = ({
               ></path>
             </g>
           </g>
-          <g id="React">
+          <g id="React" className="animate-[jump_3s_infinite_800ms]">
             <g id="ReactCircle" filter="url(#filter3_d_1_3)">
               <circle
                 cx="93.5"
