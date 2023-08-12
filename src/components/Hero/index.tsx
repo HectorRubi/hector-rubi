@@ -1,8 +1,9 @@
-import { Stats } from './Stats'
+import { Stat } from './Stat'
 import { HeroImage } from './HeroImage'
 import { HeroPhrase } from './HeroPhrase'
 
 import { CONTAINER } from '../constants'
+import { stats } from '../../data/stats'
 
 export const Hero = () => {
   return (
@@ -24,7 +25,11 @@ export const Hero = () => {
             </p>
           </div>
 
-          <Stats />
+          <div className="mb-20 flex gap-10">
+            {stats.map((stat, index) => (
+              <Stat key={index} stat={stat} />
+            ))}
+          </div>
         </div>
 
         <div className="relative hidden md:block md:w-1/2 2xl:pt-36">
