@@ -1,5 +1,6 @@
 import { Stats } from './Stats'
 import { HeroImage } from './HeroImage'
+import { HeroPhrase } from './HeroPhrase'
 
 import { CONTAINER } from '../constants'
 
@@ -14,11 +15,9 @@ export const Hero = () => {
             <p className="text-md mb-12 inline-block rounded bg-accent-500 px-3 py-1 text-white shadow">
               Full Stack Developer
             </p>
-            <h2 className="mb-10 text-4xl !leading-snug md:text-5xl lg:text-6xl">
-              Talk is cheap.
-              <br />
-              Show me the code
-            </h2>
+
+            <HeroPhrase />
+
             <p className="text-md mb-20 text-secondary-500 dark:text-secondary-400 lg:mb-36">
               I code beautifully simple things, <br />
               and I love what I do.
