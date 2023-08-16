@@ -1,9 +1,11 @@
 export const Tooltip = ({
   text,
   position,
+  className,
 }: {
   text: string
   position: 'center' | 'left' | 'right'
+  className?: string
 }) => {
   const positionClasses = () => {
     if (position === 'center') {
@@ -23,7 +25,7 @@ export const Tooltip = ({
 
   return (
     <div
-      className={`invisible absolute top-full flex w-fit flex-col justify-center group-hover:visible ${positionClasses()}`}
+      className={`invisible absolute top-full flex w-fit flex-col justify-center group-hover:visible ${positionClasses()} ${className}`}
     >
       <div className="mx-2 w-2 border-b-8 border-l-4 border-r-4 border-b-black border-l-transparent border-r-transparent"></div>
       <span className="block rounded bg-black px-3 py-2 text-xs text-white">
