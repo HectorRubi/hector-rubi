@@ -1,4 +1,6 @@
 import Image from 'next/image'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import { Project as ProjectType } from '../../../types/project'
 
 const article = [
@@ -48,12 +50,13 @@ export const Project = ({ project }: { project: ProjectType }) => {
 
       <div className={content.join(' ')}>
         <h3 className="text-xl sm:text-2xl lg:text-3xl">
+          <span>{project.name}</span>
           <a
             href={project.link}
             target="_blank"
-            className="transition-all hover:underline hover:underline-offset-8"
+            className="ml-2 text-sm transition-colors hover:text-accent-500"
           >
-            {project.name}
+            <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
           </a>
         </h3>
 
