@@ -18,7 +18,7 @@ const figure = [
   // After general
   'after:bg-black after:transition-opacity',
   // After opacity
-  'after:opacity-50 group-hover:after:opacity-30',
+  'after:opacity-30 group-hover:after:opacity-10',
 ]
 
 const content = [
@@ -41,8 +41,8 @@ export const Project = ({ project }: { project: ProjectType }) => {
           className="h-full w-full object-cover lg:rounded"
           src={project.image}
           alt={project.name}
-          width={1920}
-          height={1080}
+          width={960}
+          height={720}
         />
       </figure>
 
