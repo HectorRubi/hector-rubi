@@ -11,7 +11,7 @@ export const Hero = () => {
       <div
         className={`${CONTAINER} flex flex-col items-center justify-center md:flex-row`}
       >
-        <div className="w-full pt-36 md:w-1/2">
+        <div className="w-full pt-20 md:w-1/2 md:pt-36">
           <div className="lg:ml-10">
             <p className="text-md mb-12 inline-block rounded bg-accent-500 px-3 py-1 text-white shadow">
               Full Stack Developer
@@ -25,7 +25,7 @@ export const Hero = () => {
             </p>
           </div>
 
-          <div className="mb-20 flex gap-10">
+          <div className="mb-20 flex flex-wrap gap-10">
             {stats.map((stat, index) => (
               <Stat key={index} stat={stat} />
             ))}

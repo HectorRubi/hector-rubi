@@ -35,8 +35,7 @@ export const Navbar = () => {
     >
       <nav
         className={`bg-primary-400 dark:bg-primary-900 ${
-          scrollY > navHeight.current &&
-          'border-b-2 border-primary-200 dark:border-primary-400'
+          scrollY >= viewport.height && 'shadow-2xl'
         }`}
         ref={navRef}
       >

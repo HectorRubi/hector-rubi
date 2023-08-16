@@ -7,6 +7,6 @@ export const stats: Stat[] = [
   },
   {
     size: 10,
-    text: ['PROJECTS COMPLETED', 'ON 1 COUNTRIES'],
+    text: ['PROJECTS', 'COMPLETED'],
   },
 ]
