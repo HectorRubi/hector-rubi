@@ -6,7 +6,7 @@ export const LatestWorks = () => {
   return (
     <section className="bg-primary-400 dark:bg-primary-900">
       <div
-        className={`${CONTAINER} grid grid-cols-1 gap-10 px-5 py-36 lg:grid-cols-2 lg:grid-rows-4 lg:gap-x-12 lg:gap-y-24`}
+        className={`${CONTAINER} grid grid-cols-1 gap-10 px-5 py-20 md:grid-cols-2 md:py-36 lg:grid-rows-4 lg:gap-x-12 lg:gap-y-24`}
       >
         <div className="row-span-1 mb-5 md:flex md:flex-col md:justify-center lg:ml-20">
           <h2 className="mb-5 text-2xl md:text-3xl">Latest Works</h2>
@@ -19,7 +19,7 @@ export const LatestWorks = () => {
           <Project key={projectIndex} project={project} />
         ))}
 
-        <div className="row-span-1 mb-5 md:flex md:flex-col md:justify-center lg:ml-20">
+        <div className="row-span-1 my-5 md:flex md:flex-col md:justify-center lg:ml-20">
           <h2 className="mb-5 text-2xl">
             <a
               href="#"
