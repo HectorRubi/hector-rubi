@@ -5,7 +5,9 @@ import { skills } from '../../data/skills'
 export const Description = () => {
   return (
     <section className="bg-gradient-radial-center from-primary-400/50 to-primary-400 dark:from-primary-800 dark:to-primary-900">
-      <div className={`${CONTAINER} flex flex-col-reverse py-36 md:flex-row`}>
+      <div
+        className={`${CONTAINER} flex flex-col-reverse py-20 md:flex-row md:py-36`}
+      >
         <div className="md:w-1/2">
           {skills.map((skill, index) => (
             <div
