@@ -51,10 +51,6 @@ export const stack: Stack[] = [
     text: 'JavaScript',
   },
   {
-    element: TypeScript,
-    text: 'TypeScript',
-  },
-  {
     icon: faNpm,
     text: 'npm',
   },
@@ -65,6 +61,10 @@ export const stack: Stack[] = [
   {
     icon: faGithub,
     text: 'GitHub',
+  },
+  {
+    element: TypeScript,
+    text: 'TypeScript',
   },
   {
     icon: faLinux,
