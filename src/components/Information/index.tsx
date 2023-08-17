@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { CONTAINER } from '../constants'
+import { CONTAINER } from '@/components/constants'
 
 export const Information = () => {
   return (

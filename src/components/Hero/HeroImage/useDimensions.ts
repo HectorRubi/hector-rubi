@@ -1,5 +1,5 @@
 import { RefObject, useEffect, useState } from 'react'
-import { useViewportDimensions } from './../../../hooks/useViewportDimensions'
+import { useViewportDimensions } from '@/hooks/useViewportDimensions'
 
 export const useDimensions = (divRef: RefObject<HTMLDivElement>) => {
   const [dimensions, setDimensions] = useState({ width: 0 })

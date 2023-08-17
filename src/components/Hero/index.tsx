@@ -1,9 +1,9 @@
+import { CONTAINER } from '@/components/constants'
+import { stats } from '@/data/stats'
+
 import { Stat } from './Stat'
 import { HeroImage } from './HeroImage'
 import { HeroPhrase } from './HeroPhrase'
-
-import { CONTAINER } from '../constants'
-import { stats } from '../../data/stats'
 
 export const Hero = () => {
   return (

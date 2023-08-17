@@ -23,6 +23,8 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
+        'shape-light': 'url(/shape-bg-light.svg)',
+        'shape-dark': 'url(/shape-bg-dark.svg)',
         'gradient-radial-top':
           'radial-gradient(circle 400px at top, var(--tw-gradient-stops))',
         'gradient-radial-left':
@@ -45,6 +47,26 @@ module.exports = {
             'animation-timing-function': 'cubic-bezier(0, 0, 0.2, 1)',
           },
         },
+        carousel: {
+          from: {
+            transform: 'translateX(0)',
+          },
+          to: {
+            transform: 'translateX(-100%)',
+          },
+        },
+        'carousel-inverse': {
+          from: {
+            transform: 'translateX(0)',
+          },
+          to: {
+            transform: 'translateX(100%)',
+          },
+        },
+      },
+      animation: {
+        carousel: 'carousel 200s infinite linear',
+        'carousel-inverse': 'carousel-inverse 200s infinite linear',
       },
     },
   },

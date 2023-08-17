@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
-import { Project as ProjectType } from '../../../types/project'
+import { Project as ProjectType } from '@/types/project'
 
 const article = [
   'group relative row-span-2 overflow-hidden rounded-lg transition-all',
@@ -20,7 +20,7 @@ const figure = [
   // After general
   'after:bg-black after:transition-opacity',
   // After opacity
-  'after:opacity-30 group-hover:after:opacity-10',
+  'after:opacity-10 group-hover:after:opacity-0 dark:after:opacity-30 dark:group-hover:after:opacity-20',
 ]
 
 const content = [

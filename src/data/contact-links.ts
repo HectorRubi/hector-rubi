@@ -1,6 +1,6 @@
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 
-import { ContactLink } from '../types/contact-link'
+import { ContactLink } from '@/types/contact-link'
 
 export const contactLinks: ContactLink[] = [
   {

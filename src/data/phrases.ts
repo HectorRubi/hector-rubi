@@ -1,4 +1,4 @@
-import { Phrase } from '../types/phrase'
+import { Phrase } from '@/types/phrase'
 
 export const phrases: Phrase[] = [
   {
