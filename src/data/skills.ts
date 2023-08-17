@@ -4,7 +4,7 @@ import {
   faTerminal,
 } from '@fortawesome/free-solid-svg-icons'
 
-import { Skill } from '../types/skill'
+import { Skill } from '@/types/skill'
 
 export const skills: Skill[] = [
   {

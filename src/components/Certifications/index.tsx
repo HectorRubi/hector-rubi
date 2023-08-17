@@ -1,8 +1,7 @@
 import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
-import { CONTAINER } from '../constants'
-import { certifications } from '../../data/certifications'
+import { certifications } from '@/data/certifications'
+import { CONTAINER } from '@/components/constants'
 
 export const Certifications = () => {
   return (

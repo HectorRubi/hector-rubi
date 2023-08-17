@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { CONTAINER } from '../constants'
-import { skills } from '../../data/skills'
+import { CONTAINER } from '@/components/constants'
+import { skills } from '@/data/skills'
 
 export const Description = () => {
   return (
@@ -34,9 +34,9 @@ export const Description = () => {
           <h2 className="mb-8 text-secondary-600 dark:text-secondary-400">
             Description
           </h2>
-          <h3 className="text-bold mb-12 text-4xl xl:text-5xl">
+          <h1 className="text-bold mb-12 text-4xl xl:text-5xl">
             Hello! I&apos;m Hector Rubí
-          </h3>
+          </h1>
           <p className="mb-8 text-2xl italic text-secondary-800 dark:text-secondary-200">
             Every great software begin with an even better idea
           </p>

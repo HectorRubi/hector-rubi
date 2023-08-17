@@ -1,10 +1,10 @@
 'use client'
 import Typewriter from 'typewriter-effect'
-import { phrases } from '../../../data/phrases'
+import { phrases } from '@/data/phrases'
 
 export const HeroPhrase = () => {
   return (
-    <h2 className="mb-10 min-h-[165px] text-4xl !leading-snug xl:min-h-[245px] xl:text-6xl">
+    <p className="mb-10 min-h-[165px] text-4xl !leading-snug xl:min-h-[245px] xl:text-6xl">
       <Typewriter
         options={{
           loop: true,
@@ -23,6 +23,6 @@ export const HeroPhrase = () => {
           })
         }}
       />
-    </h2>
+    </p>
   )
 }

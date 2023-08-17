@@ -20,8 +20,6 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 import { faDatabase } from '@fortawesome/free-solid-svg-icons'
 
-import { Stack } from '@/types/stack'
-
 import {
   TypeScript,
   Postman,
@@ -32,6 +30,7 @@ import {
   Tailwind,
   NextJS,
 } from '@/icons'
+import { Stack } from '@/types/stack'
 
 export const stack: Stack[] = [
   {

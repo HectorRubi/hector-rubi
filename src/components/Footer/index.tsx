@@ -1,8 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
-import { CONTAINER } from '../constants'
-import { contactLinks } from '../../data/contact-links'
+import { CONTAINER } from '@/components/constants'
+import { contactLinks } from '@/data/contact-links'
 
 export const Footer = () => {
   return (

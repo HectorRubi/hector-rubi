@@ -7,7 +7,7 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 
 export const metadata: Metadata = {
-  title: 'Portfolio',
+  title: 'Hector Rubi | Portfolio',
 }
 
 export default function RootLayout({

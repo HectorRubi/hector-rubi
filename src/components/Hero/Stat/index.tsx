@@ -1,6 +1,6 @@
 'use client'
+import { Stat as StatType } from '@/types/stat'
 import { useCounterAnimate } from './useCounterAnimate'
-import { Stat as StatType } from '../../../types/stat'
 
 export const Stat = ({ stat }: { stat: StatType }) => {
   const { count } = useCounterAnimate(stat.size)

@@ -7,7 +7,7 @@ import {
   faPython,
 } from '@fortawesome/free-brands-svg-icons'
 
-import { CertificationsGroup } from '../types/certifications'
+import { CertificationsGroup } from '@/types/certifications'
 
 export const certifications: CertificationsGroup[] = [
   {
