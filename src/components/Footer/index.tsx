@@ -7,9 +7,7 @@ import { contactLinks } from '../../data/contact-links'
 export const Footer = () => {
   return (
     <footer className="bg-primary-200 py-5 dark:bg-primary-950">
-      <div
-        className={`${CONTAINER} flex flex-col md:flex-row md:justify-between`}
-      >
+      <div className={`${CONTAINER} flex flex-wrap justify-between`}>
         <h3 className="text-xl">
           <span>Hector </span>
           <span className="text-secondary-600 dark:text-secondary-400">
