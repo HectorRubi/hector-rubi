@@ -24,7 +24,7 @@ const figure = [
 ]
 
 const content = [
-  'absolute bottom-0 left-0 right-0 top-0 md:bottom-auto',
+  'absolute bottom-0 left-0 right-0 top-0 md:!bottom-auto',
   // Padding
   'p-5 sm:p-8 md:p-10 lg:px-12 lg:py-14',
   // Flex mobile
