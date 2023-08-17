@@ -5,18 +5,19 @@ import { LatestWorks } from '@/components/LatestWorks'
 import { Certifications } from '@/components/Certifications'
 import { Information } from '@/components/Information'
 import { Footer } from '@/components/Footer'
+import { TechStack } from '@/components/TechStack'
 
 export default function Home() {
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar />
       <main>
-        <Hero></Hero>
-        <Description></Description>
-        <LatestWorks></LatestWorks>
-        <Certifications></Certifications>
-        <Information></Information>
-        <Footer></Footer>
+        <Hero />
+        <Description />
+        <LatestWorks />
+        <TechStack />
+        <Information />
+        <Footer />
       </main>
     </>
   )
