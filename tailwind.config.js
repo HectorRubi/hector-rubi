@@ -45,6 +45,26 @@ module.exports = {
             'animation-timing-function': 'cubic-bezier(0, 0, 0.2, 1)',
           },
         },
+        carousel: {
+          from: {
+            transform: 'translateX(0)',
+          },
+          to: {
+            transform: 'translateX(-100%)',
+          },
+        },
+        'carousel-inverse': {
+          from: {
+            transform: 'translateX(0)',
+          },
+          to: {
+            transform: 'translateX(100%)',
+          },
+        },
+      },
+      animation: {
+        carousel: 'carousel 200s infinite linear',
+        'carousel-inverse': 'carousel-inverse 200s infinite linear',
       },
     },
   },
