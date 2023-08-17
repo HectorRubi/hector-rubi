@@ -23,6 +23,8 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
+        'shape-light': 'url(/shape-bg-light.svg)',
+        'shape-dark': 'url(/shape-bg-dark.svg)',
         'gradient-radial-top':
           'radial-gradient(circle 400px at top, var(--tw-gradient-stops))',
         'gradient-radial-left':

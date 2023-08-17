@@ -1,10 +1,10 @@
-import { CONTAINER } from '../constants'
-import { projects } from '../../data/projects'
+import { projects } from '@/data/projects'
+import { CONTAINER } from '@/components/constants'
 import { Project } from './Project'
 
 export const LatestWorks = () => {
   return (
-    <section className="bg-primary-400 dark:bg-primary-900">
+    <section className="bg-primary-400 bg-shape-light bg-bottom bg-no-repeat dark:bg-primary-900 dark:bg-shape-dark">
       <div
         className={`${CONTAINER} grid grid-cols-1 gap-10 px-5 py-20 md:grid-cols-2 md:py-36 lg:grid-rows-4 lg:gap-x-12 lg:gap-y-24`}
       >
@@ -21,10 +21,7 @@ export const LatestWorks = () => {
 
         <div className="row-span-1 my-5 md:flex md:flex-col md:justify-center lg:ml-20">
           <h2 className="mb-5 text-2xl">
-            <a
-              href="#"
-              className="transition-all hover:text-accent-400 hover:underline hover:underline-offset-8 dark:hover:text-accent-500"
-            >
+            <a href="#" className="hover:underline">
               All Projects
             </a>
           </h2>
