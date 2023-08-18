@@ -3,7 +3,7 @@ import { Hero } from '@/components/Home/Hero'
 import { Description } from '@/components/Home/Description'
 import { LatestWorks } from '@/components/Home/LatestWorks'
 import { Certifications } from '@/components/Home/Certifications'
-import { Information } from '@/components/Home/Information'
+import { Information } from '@/components/Shared/Information'
 import { Footer } from '@/components/Shared/Footer'
 import { TechStack } from '@/components/Home/TechStack'
 
