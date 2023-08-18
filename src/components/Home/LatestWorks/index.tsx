@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { projects } from '@/data/projects'
 import { CONTAINER } from '@/components/constants'
 import { Project } from './Project'
@@ -20,11 +21,9 @@ export const LatestWorks = () => {
         ))}
 
         <div className="row-span-1 my-5 md:flex md:flex-col md:justify-center lg:ml-20">
-          <h2 className="mb-5 text-2xl">
-            <a href="#" className="hover:underline">
-              All Projects
-            </a>
-          </h2>
+          <Link href="/projects" className="mb-5 text-2xl hover:underline">
+            All Projects
+          </Link>
           <p className="leading-8 text-secondary-600 dark:text-secondary-400">
             * Some projects not allow publish by NDA
             <br />
