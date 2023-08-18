@@ -1,4 +1,4 @@
-import { Carousel } from '@/components/Carousel'
+import { Carousel } from '@/components/Shared/Carousel'
 import { stack } from '@/data/stack'
 import { splitArrayToChunks } from '@/utils/splitArrayToChunks'
 
