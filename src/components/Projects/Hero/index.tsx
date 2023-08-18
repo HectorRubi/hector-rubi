@@ -1,9 +1,18 @@
+import Image from 'next/image'
 import { CONTAINER } from '@/components/constants'
 
 export const Hero = () => {
-  // dark:shadow-[inset_0_0_0_1000px_rgba(0,0,0,.5)]
   return (
-    <section className="bg-primary-400 bg-[url('/hero-bg.svg')] bg-cover bg-center bg-no-repeat py-20 dark:bg-primary-900 md:py-40">
+    <section className="relative overflow-hidden bg-primary-200 py-20 dark:bg-primary-700 md:py-40">
+      <div className="animate-rotation absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center">
+        <Image
+          src="/hero-bg.svg"
+          width={800}
+          height={800}
+          alt="hero-bg"
+          className="w-full"
+        ></Image>
+      </div>
       <div className={`${CONTAINER} text-center`}>
         <h1 className="mb-4 text-2xl md:text-4xl">Projects</h1>
         <h2 className="text-sm text-secondary-600 dark:text-secondary-400">
