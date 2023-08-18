@@ -3,4 +3,5 @@ export type Project = {
   stack: string[]
   image: string
   link: string
+  description: string
 }
