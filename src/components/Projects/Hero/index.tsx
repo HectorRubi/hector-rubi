@@ -3,8 +3,8 @@ import { CONTAINER } from '@/components/constants'
 
 export const Hero = () => {
   return (
-    <section className="relative overflow-hidden bg-primary-200 py-20 dark:bg-primary-700 md:py-40">
-      <div className="animate-rotation absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center">
+    <section className="relative overflow-hidden bg-primary-300 py-20 dark:bg-primary-800 md:py-40">
+      <div className="absolute bottom-0 left-0 right-0 top-0 flex animate-rotation items-center justify-center">
         <Image
           src="/hero-bg.svg"
           width={800}
