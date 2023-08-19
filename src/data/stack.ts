@@ -1,3 +1,4 @@
+import { faDatabase, faCubes } from '@fortawesome/free-solid-svg-icons'
 import {
   faHtml5,
   faCss3,
@@ -18,8 +19,6 @@ import {
   faNpm,
   faLaravel,
 } from '@fortawesome/free-brands-svg-icons'
-import { faDatabase } from '@fortawesome/free-solid-svg-icons'
-
 import {
   TypeScript,
   Postman,
@@ -30,6 +29,7 @@ import {
   Tailwind,
   NextJS,
 } from '@/icons'
+
 import { Stack } from '@/types/stack'
 
 export const stack: Stack[] = [
@@ -80,6 +80,10 @@ export const stack: Stack[] = [
   {
     element: NextJS,
     text: 'NextJS',
+  },
+  {
+    text: 'OOP',
+    icon: faCubes,
   },
   {
     icon: faDatabase,
