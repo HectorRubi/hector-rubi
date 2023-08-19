@@ -43,14 +43,25 @@ export const Item = ({
 
         <p className="mb-4">
           <span className="mr-2 block">Made with:</span>
-          {project.stack.map((tech, index) => (
-            <span
-              key={index}
-              className="mr-2 inline-block text-sm text-secondary-600 dark:text-secondary-400"
-            >
-              {tech}
-            </span>
-          ))}
+          <div className="mt-2 flex flex-wrap">
+            {project.stack.map((tech, index) => (
+              <span
+                key={index}
+                className="mr-2 inline-flex cursor-pointer flex-col items-center justify-center text-secondary-600 hover:text-black dark:text-secondary-400 dark:hover:text-white"
+              >
+                <span>
+                  {tech.icon && (
+                    <FontAwesomeIcon
+                      icon={tech.icon}
+                      className="text-2xl lg:text-3xl"
+                    />
+                  )}
+                  {tech.element && <tech.element className="w-7 lg:w-8" />}
+                </span>
+                <span className="text-[0.6rem]">{tech.text}</span>
+              </span>
+            ))}
+          </div>
         </p>
 
         <p>{project.description}</p>
