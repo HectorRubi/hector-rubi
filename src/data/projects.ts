@@ -38,7 +38,7 @@ export const projects: Project[] = [
       { text: 'HTML', icon: faHtml5 },
       { text: 'CSS', icon: faCss3 },
       { text: 'JavaScript', icon: faJs },
-      { text: 'POO', icon: faCubes },
+      { text: 'OOP', icon: faCubes },
     ],
     image:
       'https://github.com/HectorRubi/hector-rubi/assets/68661875/43e7784c-d938-4e6e-914a-23d6df9e3b8a',
