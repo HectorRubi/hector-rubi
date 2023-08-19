@@ -63,10 +63,19 @@ module.exports = {
             transform: 'translateX(100%)',
           },
         },
+        rotation: {
+          from: {
+            transform: 'rotate(0)',
+          },
+          to: {
+            transform: 'rotate(360deg)',
+          },
+        },
       },
       animation: {
         carousel: 'carousel 200s infinite linear',
         'carousel-inverse': 'carousel-inverse 200s infinite linear',
+        rotation: 'rotation 50s infinite linear',
       },
     },
   },

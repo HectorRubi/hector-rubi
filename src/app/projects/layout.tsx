@@ -1,4 +1,4 @@
-import './globals.css'
+import './../globals.css'
 import type { Metadata } from 'next'
 
 import { config } from '@fortawesome/fontawesome-svg-core'
@@ -8,10 +8,10 @@ config.autoAddCss = false
 import { GTM } from '@/components/Shared/GTM'
 
 export const metadata: Metadata = {
-  title: 'Hector Rubi | Portfolio',
+  title: 'Hector Rubi | Projects',
 }
 
-export default function RootLayout({
+export default function PageLayout({
   children,
 }: {
   children: React.ReactNode

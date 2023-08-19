@@ -1,11 +1,11 @@
-import { Navbar } from '@/components/Navbar'
-import { Hero } from '@/components/Hero'
-import { Description } from '@/components/Description'
-import { LatestWorks } from '@/components/LatestWorks'
-import { Certifications } from '@/components/Certifications'
-import { Information } from '@/components/Information'
-import { Footer } from '@/components/Footer'
-import { TechStack } from '@/components/TechStack'
+import { Navbar } from '@/components/Shared/Navbar'
+import { Hero } from '@/components/Home/Hero'
+import { Description } from '@/components/Home/Description'
+import { LatestWorks } from '@/components/Home/LatestWorks'
+import { Certifications } from '@/components/Home/Certifications'
+import { Information } from '@/components/Shared/Information'
+import { Footer } from '@/components/Shared/Footer'
+import { TechStack } from '@/components/Home/TechStack'
 
 export default function Home() {
   return (

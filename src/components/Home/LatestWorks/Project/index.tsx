@@ -66,7 +66,7 @@ export const Project = ({ project }: { project: ProjectType }) => {
               key={techKey}
               className="rounded bg-accent-600 px-2 py-1 text-xs text-white shadow"
             >
-              {tech}
+              {tech.text}
             </span>
           ))}
         </p>
