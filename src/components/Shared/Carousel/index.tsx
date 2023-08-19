@@ -33,7 +33,7 @@ export const Carousel = ({
               >
                 {tech.icon && (
                   <FontAwesomeIcon
-                    icon={tech.icon as IconDefinition}
+                    icon={tech.icon}
                     className="text-2xl sm:text-3xl"
                   />
                 )}
