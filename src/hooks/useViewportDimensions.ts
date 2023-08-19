@@ -4,7 +4,6 @@ export const useViewportDimensions = () => {
   let defaultValue = { width: 0, height: 0 }
 
   if (typeof window !== 'undefined') {
-    // Client-side-only code
     defaultValue = {
       width: window.innerWidth,
       height: window.innerHeight,

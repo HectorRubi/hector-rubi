@@ -7,34 +7,33 @@ import { faEnvelope, faBars } from '@fortawesome/free-solid-svg-icons'
 import { Tooltip } from '@/components/Shared/Tooltip'
 import { CONTAINER } from '@/components/constants'
 import { contactLinks } from '@/data/contact-links'
-import { useViewportDimensions } from '@/hooks/useViewportDimensions'
-import { useScroll } from './useScroll'
+import { useHeader } from './useHeader'
 
 export const Navbar = () => {
-  const { viewport } = useViewportDimensions()
-  const { scrollY, navHeight, navRef } = useScroll()
-  const [showMenu, setShowMenu] = useState(false)
+  const { navState, navRef } = useHeader()
+  const [showMenu, setShowMenu] = useState<boolean>(false)
 
   return (
     <header
-      className={`
-        md:top-0 md:z-10
-        ${
-          scrollY > navHeight.current
-            ? 'md:sticky ' +
-              (scrollY >= viewport.height / 2 ? 'md:transition-all' : '')
-            : 'md:relative'
-        }
-        ${
-          scrollY > viewport.height
-            ? 'md:translate-y-0'
-            : scrollY > navHeight.current && 'md:-translate-y-full'
-        }
-      `}
+      className={`md:top-0 md:z-10 ${
+        navState === 'hiding' ||
+        navState === 'hiding-middle' ||
+        navState === 'visible'
+          ? 'md:sticky'
+          : 'md:relative'
+      } ${
+        navState === 'hiding' || navState === 'hiding-middle'
+          ? 'md:-translate-y-full'
+          : 'md:translate-y-0'
+      } ${
+        'hiding-middle' || navState === 'visible'
+          ? 'md:transition-transform'
+          : 'md:transition-none'
+      }`}
     >
       <nav
         className={`bg-primary-300 dark:bg-primary-800 ${
-          scrollY >= viewport.height && 'shadow-2xl'
+          navState === 'visible' ? 'shadow-2xl' : ''
         }`}
         ref={navRef}
       >
