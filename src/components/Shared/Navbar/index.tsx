@@ -10,31 +10,15 @@ import { contactLinks } from '@/data/contact-links'
 import { useHeader } from './useHeader'
 
 export const Navbar = () => {
-  const { navState, navRef } = useHeader()
+  const { navRef } = useHeader()
   const [showMenu, setShowMenu] = useState<boolean>(false)
 
   return (
     <header
-      className={`md:top-0 md:z-10 ${
-        navState === 'hiding' ||
-        navState === 'hiding-middle' ||
-        navState === 'visible'
-          ? 'md:sticky'
-          : 'md:relative'
-      } ${
-        navState === 'hiding' || navState === 'hiding-middle'
-          ? 'md:-translate-y-full'
-          : 'md:translate-y-0'
-      } ${
-        'hiding-middle' || navState === 'visible'
-          ? 'md:transition-transform'
-          : 'md:transition-none'
-      }`}
+      className="md:top-0 md:z-10"
     >
       <nav
-        className={`bg-primary-300 dark:bg-primary-800 ${
-          navState === 'visible' ? 'shadow-2xl' : ''
-        }`}
+        className="bg-primary-300 dark:bg-primary-800"
         ref={navRef}
       >
         <div
