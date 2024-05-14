@@ -1,9 +1,12 @@
 import Link from 'next/link'
-import { projects } from '@/data/projects'
+// import { projects } from '@/data/projects'
+import { getLatestProjects } from '@/app/lib/projects/getLatestProjects'
 import { CONTAINER } from '@/components/constants'
 import { Project } from './Project'
 
-export const LatestWorks = () => {
+export const LatestWorks = async () => {
+  const latestProjects = await getLatestProjects()
+
   return (
     <section className="bg-primary-400 bg-shape-light bg-bottom bg-no-repeat dark:bg-primary-900 dark:bg-shape-dark">
       <div
@@ -16,7 +19,7 @@ export const LatestWorks = () => {
           </p>
         </div>
 
-        {projects.map((project, projectIndex) => (
+        {latestProjects.map((project, projectIndex) => (
           <Project key={projectIndex} project={project} />
         ))}
 
