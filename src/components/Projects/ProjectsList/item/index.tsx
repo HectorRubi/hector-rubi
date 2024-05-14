@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import { Project } from '@/types/project'
+import { getTechFromStack } from '@/app/lib/stack/getTechFromStack'
 
 export const Item = ({
   project,
@@ -46,23 +47,29 @@ export const Item = ({
         </p>
 
         <div className="mb-4 flex flex-wrap">
-          {/* {project.stack.map((tech, index) => (
-            <span
-              key={index}
-              className="mr-2 inline-flex cursor-pointer flex-col items-center justify-center text-secondary-600 hover:text-black dark:text-secondary-400 dark:hover:text-white"
-            >
-              <span>
-                {tech.icon && (
-                  <FontAwesomeIcon
-                    icon={tech.icon}
-                    className="text-2xl lg:text-3xl"
-                  />
-                )}
-                {tech.element && <tech.element className="w-7 lg:w-8" />}
-              </span>
-              <span className="text-[0.6rem]">{tech.text}</span>
-            </span>
-          ))} */}
+          {project.stack &&
+            project.stack.map((stackElement, index) => {
+              const tech = getTechFromStack(stackElement as string)
+              return (
+                tech && (
+                  <span
+                    key={index}
+                    className="mr-2 inline-flex cursor-pointer flex-col items-center justify-center text-secondary-600 hover:text-black dark:text-secondary-400 dark:hover:text-white"
+                  >
+                    <span>
+                      {tech.icon && (
+                        <FontAwesomeIcon
+                          icon={tech.icon}
+                          className="text-2xl lg:text-3xl"
+                        />
+                      )}
+                      {tech.element && <tech.element className="w-7 lg:w-8" />}
+                    </span>
+                    <span className="text-[0.6rem]">{tech.text}</span>
+                  </span>
+                )
+              )
+            })}
         </div>
 
         <p>{project.description}</p>
