@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import { Project as ProjectType } from '@/types/project'
+import { getTechObject } from '@/app/lib/stack/getTechObject'
 
 const article = [
   'group relative row-span-2 overflow-hidden rounded-lg transition-all',
@@ -61,14 +62,19 @@ export const Project = ({ project }: { project: ProjectType }) => {
         </h3>
 
         <p className="flex flex-wrap gap-3 xl:max-w-[40%] 2xl:max-w-[50%]">
-          {project.stack.map((tech, techKey) => (
-            <span
-              key={techKey}
-              className="rounded bg-accent-600 px-2 py-1 text-xs text-white shadow"
-            >
-              {tech}
-            </span>
-          ))}
+          {project.stack.map((stackElement, techKey) => {
+            const tech = getTechObject(stackElement)
+            return (
+              tech && (
+                <span
+                  key={techKey}
+                  className="rounded bg-accent-600 px-2 py-1 text-xs text-white shadow"
+                >
+                  {tech.text}
+                </span>
+              )
+            )
+          })}
         </p>
       </div>
     </article>

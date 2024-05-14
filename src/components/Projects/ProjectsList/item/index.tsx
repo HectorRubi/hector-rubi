@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import { Project } from '@/types/project'
-import { getTechFromStack } from '@/app/lib/stack/getTechFromStack'
+import { getTechObject } from '@/app/lib/stack/getTechObject'
 
 export const Item = ({
   project,
@@ -49,7 +49,7 @@ export const Item = ({
         <div className="mb-4 flex flex-wrap">
           {project.stack &&
             project.stack.map((stackElement, index) => {
-              const tech = getTechFromStack(stackElement as string)
+              const tech = getTechObject(stackElement)
               return (
                 tech && (
                   <span

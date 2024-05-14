@@ -1,8 +1,9 @@
 import { Carousel } from '@/components/Shared/Carousel'
-import { stack } from '@/data/stack'
+import { stackHash } from '@/app/lib/stack/stackHash'
 import { splitArrayToChunks } from '@/utils/splitArrayToChunks'
 
 export const TechStack = () => {
+  const stack = Object.values(stackHash)
   const sections = splitArrayToChunks(stack, 10)
   return (
     <section className="bg-primary-400 dark:bg-primary-900">
