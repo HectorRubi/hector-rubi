@@ -46,7 +46,7 @@ export const Item = ({
         </p>
 
         <div className="mb-4 flex flex-wrap">
-          {project.stack.map((tech, index) => (
+          {/* {project.stack.map((tech, index) => (
             <span
               key={index}
               className="mr-2 inline-flex cursor-pointer flex-col items-center justify-center text-secondary-600 hover:text-black dark:text-secondary-400 dark:hover:text-white"
@@ -62,7 +62,7 @@ export const Item = ({
               </span>
               <span className="text-[0.6rem]">{tech.text}</span>
             </span>
-          ))}
+          ))} */}
         </div>
 
         <p>{project.description}</p>

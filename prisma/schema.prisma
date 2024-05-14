@@ -13,5 +13,5 @@ model Projects {
   image       String
   link        String
   name        String
-  tech        String[]
+  stack       String[]
 }

@@ -1,8 +1,10 @@
-import { projects } from '@/data/projects'
+import { getProjects } from '@/app/lib/projects/getProjects'
 import { CONTAINER } from '@/components/constants'
 import { Item } from './item'
 
-export const ProjectsList = () => {
+export const ProjectsList = async () => {
+  const projects = await getProjects()
+
   return (
     <section className="bg-primary-400 dark:bg-primary-900">
       <div
