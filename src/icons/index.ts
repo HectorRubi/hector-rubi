@@ -6,6 +6,8 @@ import { MySQL } from './mysql'
 import { PostgreSQL } from './postgresql'
 import { Tailwind } from './tailwind'
 import { NextJS } from './nextjs'
+import { Prisma } from './prisma'
+import { Vercel } from './vercel'
 
 export {
   TypeScript,
@@ -16,4 +18,6 @@ export {
   PostgreSQL,
   Tailwind,
   NextJS,
+  Prisma,
+  Vercel,
 }

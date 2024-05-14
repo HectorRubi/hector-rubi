@@ -28,6 +28,8 @@ import {
   PostgreSQL,
   Tailwind,
   NextJS,
+  Prisma,
+  Vercel,
 } from '@/icons'
 
 import { Stack } from '@/types/stack'
@@ -102,6 +104,10 @@ export const stack: Stack[] = [
     text: 'Sequelize',
   },
   {
+    element: Prisma,
+    text: 'Prisma',
+  },
+  {
     element: Postman,
     text: 'Postman',
   },
@@ -120,6 +126,10 @@ export const stack: Stack[] = [
   {
     icon: faPython,
     text: 'Python',
+  },
+  {
+    element: Vercel,
+    text: 'Vercel',
   },
   {
     icon: faAws,
