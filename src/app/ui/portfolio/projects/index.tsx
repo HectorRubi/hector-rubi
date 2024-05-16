@@ -6,9 +6,9 @@ export const Projects = async () => {
   const projects = await getProjects()
 
   return (
-    <section className="bg-primary-400 dark:bg-primary-900">
+    <section className="bg-primary-400 pb-20 dark:bg-primary-900">
       <div
-        className={`${CONTAINER} gap-10 py-20 md:grid md:grid-cols-2 md:py-36 lg:grid-cols-3 2xl:grid-cols-4`}
+        className={`${CONTAINER} gap-10 md:grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4`}
       >
         {projects.map((project, projectIndex) => (
           <Item
