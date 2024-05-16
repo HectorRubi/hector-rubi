@@ -8,7 +8,7 @@ export const LatestWorks = async () => {
   const latestProjects = await getLatestProjects()
 
   return (
-    <section className="bg-primary-400 bg-shape-light bg-bottom bg-no-repeat dark:bg-primary-900 dark:bg-shape-dark">
+    <section className="bg-primary-400 dark:bg-primary-900 ">
       <div
         className={`${CONTAINER} grid grid-cols-1 gap-10 px-5 py-20 md:grid-cols-2 md:py-36 lg:grid-rows-4 lg:gap-x-12 lg:gap-y-24`}
       >
