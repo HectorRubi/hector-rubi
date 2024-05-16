@@ -2,7 +2,7 @@
 import Typewriter from 'typewriter-effect'
 import { phrases } from '@/data/phrases'
 
-export const HeroPhrase = () => {
+export const Headline = () => {
   return (
     <div className="mb-10 min-h-[165px] text-4xl !leading-snug xl:min-h-[330px] xl:text-6xl">
       <Typewriter

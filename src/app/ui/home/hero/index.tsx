@@ -1,9 +1,9 @@
 import { CONTAINER } from '@/components/constants'
 import { stats } from '@/data/stats'
 
-import { Stat } from './Stat'
-import { HeroImage } from './HeroImage'
-import { HeroPhrase } from './HeroPhrase'
+import { Stats } from './stats'
+import { Animation } from './animation'
+import { Headline } from './headline'
 
 export const Hero = () => {
   return (
@@ -17,7 +17,7 @@ export const Hero = () => {
               Full Stack Developer
             </p>
 
-            <HeroPhrase />
+            <Headline />
 
             <p className="text-md mb-20 text-secondary-500 dark:text-secondary-400 lg:mb-36">
               I code beautifully simple things, <br />
@@ -27,13 +27,13 @@ export const Hero = () => {
 
           <div className="mb-20 flex flex-wrap gap-10">
             {stats.map((stat, index) => (
-              <Stat key={index} stat={stat} />
+              <Stats key={index} stat={stat} />
             ))}
           </div>
         </div>
 
         <div className="relative hidden md:block md:w-1/2 2xl:pt-36">
-          <HeroImage
+          <Animation
             bgCircle="fill-primary-400 dark:fill-primary-900"
             bgIcons="fill-primary-500 dark:fill-primary-950"
             bgAccent="fill-accent-500"

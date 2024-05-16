@@ -2,7 +2,7 @@
 import { useRef } from 'react'
 import { useDimensions } from '@/app/ui/hooks/useDimensions'
 
-export const HeroImage = ({
+export const Animation = ({
   bgCircle,
   bgIcons,
   bgAccent,
