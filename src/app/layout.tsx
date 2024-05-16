@@ -5,10 +5,10 @@ import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 
-import { GTM } from '@/components/Shared/GTM'
+import { GTM } from '@/app/ui/components/gtm'
 
-import { Navbar } from '@/components/Shared/Navbar'
-import { Footer } from '@/components/Shared/Footer'
+import { Navbar } from '@/app/ui/components/navbar'
+import { Footer } from '@/app/ui/components/footer'
 
 export const metadata: Metadata = {
   title: 'Hector Rubi | Portfolio',

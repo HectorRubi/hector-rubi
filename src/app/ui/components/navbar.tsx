@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faBars } from '@fortawesome/free-solid-svg-icons'
 
-import { Tooltip } from '@/components/Shared/Tooltip'
+import { Tooltip } from '@/app/ui/components/tooltip'
 import { CONTAINER } from '@/components/constants'
 import { contactLinks } from '@/data/contact-links'
 
