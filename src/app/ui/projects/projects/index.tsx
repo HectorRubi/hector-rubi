@@ -2,7 +2,7 @@ import { getProjects } from '@/app/lib/projects/getProjects'
 import { CONTAINER } from '@/components/constants'
 import { Item } from './item'
 
-export const ProjectsList = async () => {
+export const Projects = async () => {
   const projects = await getProjects()
 
   return (

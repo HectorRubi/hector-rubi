@@ -1,5 +1,5 @@
 import { Hero } from '@/app/ui/projects/hero'
-import { ProjectsList } from '@/app/ui/projects/projectsList'
+import { Projects as ProjectsList } from '@/app/ui/projects/projects'
 
 export default function Projects() {
   return (
