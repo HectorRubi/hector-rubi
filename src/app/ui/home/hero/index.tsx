@@ -14,7 +14,7 @@ export const Hero = () => {
         <div className="w-full pt-20 md:w-1/2 md:pt-36">
           <div className="lg:ml-10">
             <p className="text-md mb-12 inline-block rounded bg-accent-500 px-3 py-1 text-white shadow">
-              Full Stack Developer
+              Software Engineer
             </p>
 
             <Headline />
