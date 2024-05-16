@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { NavState } from '@/types/nav-state'
-import { useViewportDimensions } from '@/hooks/useViewportDimensions'
+import { useViewportDimensions } from '@/app/ui/hooks/useViewportDimensions'
 import { useScroll } from './useScroll'
 
 export const useHeader = () => {
