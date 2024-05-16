@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { CONTAINER } from '@/components/constants'
+import { CONTAINER } from '@/app/ui/constants'
 
 export const Hero = () => {
   return (

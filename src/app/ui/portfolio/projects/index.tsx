@@ -1,5 +1,5 @@
 import { getProjects } from '@/app/lib/projects/getProjects'
-import { CONTAINER } from '@/components/constants'
+import { CONTAINER } from '@/app/ui/constants'
 import { Item } from './item'
 
 export const Projects = async () => {

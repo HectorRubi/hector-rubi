@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { CONTAINER } from '@/components/constants'
+import { CONTAINER } from '@/app/ui/constants'
 import { contactLinks } from '@/data/contact-links'
 
 export const Footer = () => {

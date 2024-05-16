@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faBars } from '@fortawesome/free-solid-svg-icons'
 
 import { Tooltip } from '@/app/ui/components/tooltip'
-import { CONTAINER } from '@/components/constants'
+import { CONTAINER } from '@/app/ui/constants'
 import { contactLinks } from '@/data/contact-links'
 
 export const Navbar = () => {

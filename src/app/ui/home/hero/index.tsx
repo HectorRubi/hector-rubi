@@ -1,4 +1,4 @@
-import { CONTAINER } from '@/components/constants'
+import { CONTAINER } from '@/app/ui/constants'
 import { stats } from '@/data/stats'
 
 import { Stats } from './stats'

@@ -1,7 +1,7 @@
 import Link from 'next/link'
 // import { projects } from '@/data/projects'
 import { getLatestProjects } from '@/app/lib/projects/getLatestProjects'
-import { CONTAINER } from '@/components/constants'
+import { CONTAINER } from '@/app/ui/constants'
 import { Project } from './project'
 
 export const LatestWorks = async () => {
