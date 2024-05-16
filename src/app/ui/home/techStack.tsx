@@ -1,6 +1,6 @@
 import { Carousel } from '@/app/ui/components/carousel'
 import { stackHash } from '@/app/lib/stack/stackHash'
-import { splitArrayToChunks } from '@/utils/splitArrayToChunks'
+import { splitArrayToChunks } from '@/app/utils/splitArrayToChunks'
 
 export const TechStack = () => {
   const stack = Object.values(stackHash)
