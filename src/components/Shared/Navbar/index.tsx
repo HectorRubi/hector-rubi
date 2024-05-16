@@ -7,20 +7,13 @@ import { faEnvelope, faBars } from '@fortawesome/free-solid-svg-icons'
 import { Tooltip } from '@/components/Shared/Tooltip'
 import { CONTAINER } from '@/components/constants'
 import { contactLinks } from '@/data/contact-links'
-import { useHeader } from './useHeader'
 
 export const Navbar = () => {
-  const { navRef } = useHeader()
   const [showMenu, setShowMenu] = useState<boolean>(false)
 
   return (
-    <header
-      className="md:top-0 md:z-10"
-    >
-      <nav
-        className="bg-primary-300 dark:bg-primary-800"
-        ref={navRef}
-      >
+    <header className="md:top-0 md:z-10">
+      <nav className="bg-primary-300 dark:bg-primary-800">
         <div
           className={`${CONTAINER} relative z-10 flex flex-row items-center justify-between gap-4 py-10`}
         >
