@@ -24,7 +24,7 @@ export const LatestWorks = async () => {
         ))}
 
         <div className="row-span-1 my-5 md:flex md:flex-col md:justify-center lg:ml-20">
-          <Link href="/projects" className="mb-5 text-2xl hover:underline">
+          <Link href="/portfolio" className="mb-5 text-2xl hover:underline">
             All Projects
           </Link>
           <p className="leading-8 text-secondary-600 dark:text-secondary-400">

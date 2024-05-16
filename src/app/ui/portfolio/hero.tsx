@@ -14,7 +14,7 @@ export const Hero = () => {
         ></Image>
       </div>
       <div className={`${CONTAINER} text-center`}>
-        <h1 className="mb-4 text-2xl md:text-4xl">Projects</h1>
+        <h1 className="mb-4 text-2xl md:text-4xl">Portfolio</h1>
         <h2 className="text-sm text-secondary-600 dark:text-secondary-400">
           Exploring a compilation of my diverse projects
         </h2>
