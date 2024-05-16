@@ -5,48 +5,28 @@ import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import { Project } from '@/types/project'
 import { getTechObject } from '@/app/lib/stack/getTechObject'
 
-export const Item = ({
-  project,
-  inverse,
-}: {
-  project: Project
-  inverse?: boolean
-}) => {
+export const Item = ({ project }: { project: Project }) => {
   return (
-    <div
-      className={`mb-8 flex flex-col-reverse items-stretch justify-between gap-8 rounded-lg bg-primary-300 p-4 dark:bg-primary-800 md:flex-col-reverse ${
-        inverse ? 'sm:flex-row-reverse' : 'sm:flex-row'
-      }`}
-    >
-      <div className="sm:max-w-[18rem] md:max-w-none">
+    <div>
+      <div className="relative">
         <Image
           src={project.image}
           width={960}
           height={720}
-          alt="Image"
-          className="sm:h-full sm:object-cover"
-        ></Image>
-      </div>
+          alt={project.name}
+        />
 
-      <div className="w-full">
-        <h3 className="mb-4 flex items-center justify-between">
-          <span className="mr-4 text-2xl">{project.name}</span>
-          <span className="text-sm">
-            <Link
-              href={project.link}
-              target="_blank"
-              className="transition-colors hover:text-accent-600 dark:hover:text-accent-400"
-            >
-              <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-            </Link>
-          </span>
-        </h3>
+        <div className="absolute right-0 top-0 bg-black px-3 py-2">
+          <Link
+            href={project.link}
+            target="_blank"
+            className="text-lg transition-colors hover:text-accent-600 dark:hover:text-accent-400"
+          >
+            <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+          </Link>
+        </div>
 
-        <p className="mb-4">
-          <span className="mr-2 block">Made with:</span>
-        </p>
-
-        <div className="mb-4 flex flex-wrap">
+        <div className="absolute bottom-0 left-0 right-0 flex flex-wrap justify-center bg-black bg-opacity-60 py-2">
           {project.stack &&
             project.stack.map((stackElement, index) => {
               const tech = getTechObject(stackElement)
@@ -71,8 +51,13 @@ export const Item = ({
               )
             })}
         </div>
+      </div>
 
-        <p>{project.description}</p>
+      <div className="py-5">
+        <h3 className="md:text-lg lg:text-xl">{project.name}</h3>
+        <p className="text-secondary-600 dark:text-secondary-400">
+          {project.description}
+        </p>
       </div>
     </div>
   )

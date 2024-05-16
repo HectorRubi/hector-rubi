@@ -8,14 +8,10 @@ export const Projects = async () => {
   return (
     <section className="bg-primary-400 pb-20 dark:bg-primary-900">
       <div
-        className={`${CONTAINER} gap-10 md:grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4`}
+        className={`${CONTAINER} grid grid-cols-1 gap-10 max-sm:max-w-xs sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4`}
       >
         {projects.map((project, projectIndex) => (
-          <Item
-            key={projectIndex}
-            project={project}
-            inverse={(projectIndex + 1) % 2 === 0}
-          />
+          <Item key={projectIndex} project={project} />
         ))}
       </div>
     </section>
