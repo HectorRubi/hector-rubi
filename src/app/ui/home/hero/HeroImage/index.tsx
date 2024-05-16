@@ -1,6 +1,6 @@
 'use client'
 import { useRef } from 'react'
-import { useDimensions } from './useDimensions'
+import { useDimensions } from '@/app/ui/hooks/useDimensions'
 
 export const HeroImage = ({
   bgCircle,
