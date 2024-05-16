@@ -2,6 +2,7 @@ import {
   faDatabase,
   faCode,
   faTerminal,
+  faTools,
 } from '@fortawesome/free-solid-svg-icons'
 
 import { Skill } from '@/types/skill'
@@ -20,9 +21,10 @@ export const skills: Skill[] = [
     icon: faTerminal,
   },
   {
-    name: 'Database',
-    description: 'I know store data on easy way.',
-    stat: 1,
-    icon: faDatabase,
+    name: 'Solving Problems',
+    description:
+      'Every problem has a solution, we just need to find the best one.',
+    stat: 0,
+    icon: faTools,
   },
 ]
