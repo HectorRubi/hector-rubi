@@ -7,6 +7,9 @@ config.autoAddCss = false
 
 import { GTM } from '@/components/Shared/GTM'
 
+import { Navbar } from '@/components/Shared/Navbar'
+import { Footer } from '@/components/Shared/Footer'
+
 export const metadata: Metadata = {
   title: 'Hector Rubi | Portfolio',
 }
@@ -21,7 +24,11 @@ export default function RootLayout({
       <head>
         <GTM />
       </head>
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
+      </body>
     </html>
   )
 }
