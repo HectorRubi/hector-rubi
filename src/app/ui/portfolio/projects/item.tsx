@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import { Project } from '@/types/project'
 import { getTechObject } from '@/app/lib/stack/getTechObject'
+import { StackItem } from '@/app/ui/components/stackItem'
 
 export const Item = ({ project }: { project: Project }) => {
   return (
@@ -29,26 +30,8 @@ export const Item = ({ project }: { project: Project }) => {
         <div className="absolute bottom-0 left-0 right-0 flex flex-wrap justify-center bg-black bg-opacity-60 py-2">
           {project.stack &&
             project.stack.map((stackElement, index) => {
-              const tech = getTechObject(stackElement)
-              return (
-                tech && (
-                  <span
-                    key={index}
-                    className="mr-2 inline-flex cursor-pointer flex-col items-center justify-center text-secondary-600 hover:text-black dark:text-secondary-400 dark:hover:text-white"
-                  >
-                    <span>
-                      {tech.icon && (
-                        <FontAwesomeIcon
-                          icon={tech.icon}
-                          className="text-2xl lg:text-3xl"
-                        />
-                      )}
-                      {tech.element && <tech.element className="w-7 lg:w-8" />}
-                    </span>
-                    <span className="text-[0.6rem]">{tech.text}</span>
-                  </span>
-                )
-              )
+              const stack = getTechObject(stackElement)
+              return stack && <StackItem key={index} stack={stack} />
             })}
         </div>
       </div>
