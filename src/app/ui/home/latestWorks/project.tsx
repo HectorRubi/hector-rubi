@@ -1,11 +1,12 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import { Project as ProjectType } from '@/types/project'
 import { getTechObject } from '@/app/lib/stack/getTechObject'
 
 const article = [
-  'group relative row-span-2 overflow-hidden rounded-lg transition-all',
+  'group relative row-span-2 overflow-hidden transition-all',
   // Flex
   'flex flex-col justify-between',
   // Hover
@@ -32,8 +33,6 @@ const content = [
   'flex flex-col items-center justify-center gap-5',
   // Flex tablet
   'md:items-start',
-  // Flex desktop
-  'xl:flex-row xl:items-center xl:justify-between',
 ]
 
 export const Project = ({ project }: { project: ProjectType }) => {
@@ -41,7 +40,7 @@ export const Project = ({ project }: { project: ProjectType }) => {
     <article className={article.join(' ')}>
       <figure className={figure.join(' ')}>
         <Image
-          className="h-full w-full object-cover lg:rounded"
+          className="h-full w-full object-cover"
           src={project.image}
           alt={project.name}
           width={960}
@@ -50,32 +49,31 @@ export const Project = ({ project }: { project: ProjectType }) => {
       </figure>
 
       <div className={content.join(' ')}>
-        <h3 className="text-xl sm:text-2xl lg:text-3xl">
-          <span>{project.name}</span>
-          <a
-            href={project.link}
-            target="_blank"
-            className="ml-2 text-sm transition-colors hover:text-accent-500"
-          >
-            <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-          </a>
-        </h3>
-
-        <p className="flex flex-wrap gap-3 xl:max-w-[40%] 2xl:max-w-[50%]">
-          {project.stack.map((stackElement, techKey) => {
-            const tech = getTechObject(stackElement)
+        <h3 className="text-xl sm:text-2xl lg:text-3xl">{project.name}</h3>
+        <div className="flex gap-2">
+          {project.stack.map((stackItem, index) => {
+            const stack = getTechObject(stackItem)
             return (
-              tech && (
+              stack && (
                 <span
-                  key={techKey}
+                  key={index}
                   className="rounded bg-accent-600 px-2 py-1 text-xs text-white shadow"
                 >
-                  {tech.text}
+                  {stack.text}
                 </span>
               )
             )
           })}
-        </p>
+        </div>
+        <div className="absolute right-0 top-0 bg-black px-3 py-2">
+          <Link
+            href={project.link}
+            target="_blank"
+            className="text-lg transition-colors hover:text-accent-500"
+          >
+            <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+          </Link>
+        </div>
       </div>
     </article>
   )
